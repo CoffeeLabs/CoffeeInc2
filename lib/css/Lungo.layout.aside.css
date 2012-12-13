@@ -1,0 +1,110 @@
+/**
+ * Stylesheet
+ *
+ * @namespace Lungo.Layout
+ * @class Aside
+ *
+ * @author Javier Jimenez Villar <javi@tapquo.com> || @soyjavi
+ */
+/* DIMENSIONS */
+/* COLORS */
+section.aside:not(.small) {
+  -webkit-transform: translatex(264px);
+  -moz-transform: translatex(264px);
+  -ms-transform: translatex(264px);
+  -o-transform: translatex(264px);
+  transform: translatex(264px);
+}
+section.aside.small {
+  -webkit-transform: translatex(64px);
+  -moz-transform: translatex(64px);
+  -ms-transform: translatex(64px);
+  -o-transform: translatex(64px);
+  transform: translatex(64px);
+}
+section.aside.right {
+  -webkit-transform: translatex(-264px);
+  -moz-transform: translatex(-264px);
+  -ms-transform: translatex(-264px);
+  -o-transform: translatex(-264px);
+  transform: translatex(-264px);
+}
+section.aside.right.small {
+  -webkit-transform: translatex(-64px);
+  -moz-transform: translatex(-64px);
+  -ms-transform: translatex(-64px);
+  -o-transform: translatex(-64px);
+  transform: translatex(-64px);
+}
+aside {
+  position: absolute;
+  height: inherit;
+  top: 0;
+  bottom: 0;
+  display: none;
+  z-index: -1;
+  width: 264px;
+}
+aside.right {
+  right: 0px;
+}
+aside.show {
+  z-index: 0;
+  display: block;
+}
+aside header,
+aside footer {
+  position: relative;
+  left: none;
+  height: 44px;
+}
+aside footer {
+  position: absolute;
+  bottom: 0;
+}
+aside .bubble {
+  float: right;
+}
+aside.small {
+  width: 64px;
+}
+aside.small nav {
+  width: 64px;
+  text-align: center;
+}
+aside.small nav a {
+  display: block;
+  padding: 0px;
+  width: 64px;
+  height: 64px;
+}
+aside.small nav a .icon {
+  position: absolute;
+  width: inherit;
+  font-size: 38px;
+  line-height: 64px;
+}
+aside.small nav a .bubble {
+  position: relative;
+  top: -54px;
+  right: 6px;
+}
+aside.small nav a:first-child {
+  margin-top: 8px;
+}
+/*
+@TODO: Tablets & TV on final release
+@media handheld, only screen and (min-width: 768px) {
+    .autohide[data-router="aside"] {  display: none !important; }
+
+    section.aside {
+        width: auto !important;
+        left: @aside-width;
+        right: 0px !important;
+        .transform(translate3d(0px, 0, 0));
+        -webkit-transition: none;
+
+        &.small{ left: @aside-width-small; }
+    }
+}
+*/

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Coffee Inc.</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="cleartype" content="on">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <!-- iPhone -->
+        <link href="http://lungo.tapquo.com/resources/icon-57.png" sizes="57x57" rel="apple-touch-icon">
+        <link href="http://lungo.tapquo.com/resources/startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px)
+              and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+        <!-- iPhone (Retina) -->
+        <link href="http://lungo.tapquo.com/resources/icon-114.png" sizes="114x114" rel="apple-touch-icon">
+        <link href="http://lungo.tapquo.com/resources/startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px)
+              and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+        <!-- iPhone 5 -->
+        <link href="http://lungo.tapquo.com/resources/startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px)
+              and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+        <!-- iPad -->
+        <link href="http://lungo.tapquo.com/resources/icon-72.png" sizes="72x72" rel="apple-touch-icon">
+        <link href="http://lungo.tapquo.com/resources/startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
+              and (orientation: portrait)
+              and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <link href="http://lungo.tapquo.com/resources/startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
+              and (orientation: landscape)
+              and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+        <!-- iPad (Retina) -->
+        <link href="http://lungo.tapquo.com/resources/icon-144.png" sizes="144x144" rel="apple-touch-icon">
+        <link href="http://lungo.tapquo.com/resources/startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
+              and (orientation: portrait)
+              and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="http://lungo.tapquo.com/resources/startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
+              and (orientation: landscape)
+              and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+        <!-- Lungo - Stylesheets -->
+        <!--    
+            <link rel="stylesheet" href="components/lungo/lungo.css">
+        -->    
+        <link rel="stylesheet" href="lib/components/lungo/lungo.icon.css">
+        <link rel="stylesheet" href="lib/components/lungo/lungo.icon.brand.css">
+        <link rel="stylesheet" href="lib/components/lungo/lungo.theme.default.css">
+        <link rel="stylesheet" href="lib/extra.css">
+        <link rel="stylesheet" href="lib/combined.css">
+    </head>
+
+    <body class="app">
+
+
+
+
+        <!--//////////// LOGIN ////////////-->
+        <section id="login" data-transition="slide">
+
+            <article class="list">      	
+                <form class="margined" method="post" action="index.html">
+                    <img src="assets/game-logo.svg" class="gamelogo">        	  
+                    <div class="menu-elements">
+                        <!--<label>Username</label>-->
+                        <input type="text" name="Username" placeholder="Username"/>                          
+                        <!--<label>Password</label>-->
+                        <input type="password" name="Password" placeholder="Password"/>                        
+                        <a class="button" onclick="checkUser(document.getElementsByName('Username').value,document.getElementsByName('Password').value);">Log In</a>
+                    </div>
+                </form>
+            </article>  
+
+        </section>
+        <!-- /////////// END /////////// -->
+        <!--//////////// LOGIN ////////////-->
+
+
+
+        <!--//////////// SIGNUP ////////////-->
+        <section id="signup" data-transition="slide">
+
+            <article class="list">      	
+                <form class="margined">
+                    <img src="assets/game-logo.svg" class="gamelogo">        	  
+                    <div class="menu-elements">
+                        <input type="text" placeholder="Username"/>                          
+                        <input type="password" value="value" enabled/>                       
+                        <input type="password" value="value" enabled/>                 
+                        <a href="/usr/share/nginx/www/CoffeeInc/index.html" class="button" id="signup">Sign Up</a>
+                    </div>
+                </form>
+            </article>  
+
+        </section>
+        <!-- /////////// END /////////// -->
+        <!--//////////// SIGNUP ////////////-->
+
+
+
+        <!--//////////// MAIN MENU ////////////-->
+        <section id="menu" data-transition="slide">
+
+            <article id="main-article" class="list">      	
+                <form class="margined">
+                    <img src="assets/game-logo.svg" class="gamelogo">  
+                    <div class="menu-elements">      	  
+                        <a href="#main-view" data-router="section" class="button">Resume</a>           
+                        <a href="#login" data-router="section" class="button">Log Out</a>
+                    </div>
+                </form>
+            </article>  
+
+        </section>
+        <!-- /////////// END /////////// -->
+        <!--//////////// MAIN MENU ////////////-->
+
+
+        <!-- Lungo - Dependencies -->
+        <script src="lib/components/quojs/quo.js"></script>
+        <script src="lib/components/lungo/lungo.js"></script>
+
+        <script src="lib/parse.js"></script>        
+        <script src="lib/coffeeinc.js"></script>
+        <!-- Lungo - Sandbox App -->
+        <script>
+            Lungo.init({
+                name: 'prueba'
+            });
+        </script>
+    </body>
+</html>

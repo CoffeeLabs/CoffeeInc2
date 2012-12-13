@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="423.45016"
+   height="412.00003"
+   id="svg9665"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="Neues Dokument 3">
+  <defs
+     id="defs9667" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="81.181993"
+     inkscape:cy="209.09545"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     inkscape:window-width="619"
+     inkscape:window-height="364"
+     inkscape:window-x="0"
+     inkscape:window-y="51"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata9670">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-245.41777,-249.21928)">
+    <g
+       transform="translate(-55.790608,-1468.7806)"
+       id="g3783">
+      <rect
+         style="fill:#784f34;fill-opacity:1;stroke:none"
+         id="rect3557-6"
+         width="266.94061"
+         height="266.94061"
+         x="379.4632"
+         y="1727.9999" />
+      <text
+         xml:space="preserve"
+         style="font-size:69.32319641px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#784f34;fill-opacity:1;stroke:none;font-family:Raleway;-inkscape-font-specification:Raleway Light"
+         x="513.9809"
+         y="2119.584"
+         id="text3559-8"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           id="tspan3561-7"
+           x="513.9809"
+           y="2119.584"><tspan
+             id="tspan3563-2"
+             style="font-size:69.32319641px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#784f34;fill-opacity:1;font-family:Raleway;-inkscape-font-specification:Raleway Bold">COFFEE</tspan><tspan
+             id="tspan3565-7"
+             style="font-size:69.32319641px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#784f34;fill-opacity:1;font-family:Raleway;-inkscape-font-specification:Raleway Medium"> INC.</tspan></tspan></text>
+      <g
+         transform="matrix(1.6683786,0,0,1.6683786,2281.4148,-954.75287)"
+         id="g3769"
+         style="fill:#ffffff;fill-opacity:1">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           d="m -1073.1941,1686.6871 -18.0554,15.6249 0,19.6871 18.0554,0 0,-19.6871 z m 18.0551,0 -18.0551,15.6249 0,19.6871 18.0551,0 0,-19.6871 z m 18.0553,0 -18.0553,15.6249 0,19.6871 18.0553,0 c 0,-15.104 0,-20.2079 0,-35.312 z"
+           id="path3569-6"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccccccccccc" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="rect3571-0"
+           width="6.2499533"
+           height="52.499687"
+           x="-1035.0006"
+           y="1669.5001" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           d="m -1018.5424,1624.5001 -16.6666,22.8333 10,0 -6.6666,17.1667 16.6666,-22.8334 -10,0 z"
+           id="path3573-3"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccc" />
+      </g>
+    </g>
+  </g>
+</svg>

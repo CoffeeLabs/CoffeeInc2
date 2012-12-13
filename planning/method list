@@ -1,0 +1,69 @@
+Methods:
+
+Login:
+	get are username/password correct?
+	get saved game
+		get all 5 scores + money
+		get number of employees
+		get details for every employee
+		get number of investors
+		get details for every investor
+		get number of investors
+		get details for every asset
+
+Employees:
+
+personal:	
+	get skill
+	get satisfaction
+	get salary
+	get productivity for this round (how much is added to the product score)
+	get picture ID
+	
+	get was a patent generated this round?
+	get patent text (text to appear in the pop-up) "You now have a patent on rounded rectangles!"
+	
+	set salary
+	set generate new employee (with random characteristics)
+	set get rid of employee (both for firing and for deleting employees that  are not hired)
+	
+collective:
+	get satisfaction (average of all employees)
+	get talent score (average of skills, with some black magic applied)
+	
+Investors:
+	
+personal:
+	get investor interest
+	get equity	
+	get investment offer ($$$)
+	get picture ID
+	
+	get was my decision rejected
+	get text of rejection popup
+	
+collective:
+	get investor interest	
+	
+Assets:
+	get value
+	get cost/cycle
+	get picture ID	
+
+Scores:
+	get product score
+	get talent score
+	get number of patents
+	get satisfaction
+	get investor interest
+	get money
+	
+	
+	
+		
+	
+	
+
+	
+	
+	

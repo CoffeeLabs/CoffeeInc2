@@ -1,0 +1,10 @@
+NAMING CONVENTIONS FOR ASSETS:
+==============================
+
+static employee picture:                  emp_1
+static employee picture with desk:        emp_d_1
+employee animation frame for typing:      emp_at_1_1
+
+static investor picture:                  inv_1
+static employee picture with desk:        inv_d_1
+ 
