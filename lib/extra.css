@@ -23,17 +23,17 @@
 	background-color: #222 !important;
 	color: #999 !important;
 }
-.statusbar-item {
+.statusbar_item {
 	color: #999 !important;
 	margin-left: 4%;
 	float: left;
 	font-size: 15px;
 	font-weight: bold;
 }
-.statusbar-item:first-child {
+.statusbar_item:first-child {
 	margin-left: 2%;
 }
-.statusbar-item:last-child {
+.statusbar_item:last-child {
 	float:right;
 	margin-right: 2%;
 }
@@ -107,4 +107,12 @@ label {
 	width: 60% !important;
 	margin: 30px auto auto 36% !important;
 }
-	
+.stat_item_inp {
+	background-color: transparent !important;
+	border: none !important;
+	font-weight: bold;
+	width: 20px;
+}	
+.statusbar_item:last-child > * {
+	width: 45px;	
+}
