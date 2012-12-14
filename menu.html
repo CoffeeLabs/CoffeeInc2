@@ -66,16 +66,34 @@
         <section id="login" data-transition="slide">
 
             <article class="list">      	
+              
+              <form class="login-form" method="post" action="index.html">
+                <div class="margined">
+                  <img src="assets/game-logo.svg" class="gamelogo">
+                  <div class="error" style="display:none"></div>                
+                  <input type="text" id="login-username" placeholder="Username" />
+                  <input type="password" id="login-password" placeholder="Password" />
+                  <button>Log In</button>
+                  <a>
+                </div>
+              </form>                            
+            
+            
+            <!--
+            
                 <form class="margined" method="post" action="index.html">
                     <img src="assets/game-logo.svg" class="gamelogo">        	  
                     <div class="menu-elements">
-                        <!--<label>Username</label>-->
+                      
                         <input type="text" name="Username" placeholder="Username"/>                          
-                        <!--<label>Password</label>-->
+                      
                         <input type="password" name="Password" placeholder="Password"/>                        
                         <a class="button" onclick="checkUser(document.getElementsByName('Username').value,document.getElementsByName('Password').value);">Log In</a>
                     </div>
                 </form>
+                
+                -->
+                
             </article>  
 
         </section>
@@ -88,6 +106,17 @@
         <section id="signup" data-transition="slide">
 
             <article class="list">      	
+                
+                <form class="signup-form">
+                  
+                  <div class="error" style="display:none"></div>
+                  <input type="text" id="signup-username" placeholder="Username" />
+                  <input type="password" id="signup-password" placeholder="Create a Password" />
+                  <button>Sign Up</button>
+                </form>
+                              
+                
+                
                 <form class="margined">
                     <img src="assets/game-logo.svg" class="gamelogo">        	  
                     <div class="menu-elements">
