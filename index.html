@@ -61,9 +61,60 @@
         <script src="lib/components/lungo/lungo.js"></script>
 
         <script src="lib/jquery.js"></script>        
+        <script src="lib/jquery.total-storage.js"></script>                
         <script src="lib/coffeeinc.js"></script>
         <!-- Lungo - Sandbox App -->
+      <script type="text/javascript">
+        $(document).ready(function(){
+          if(refreshList().length!=0){
+            //save local storage to variables
+          }
+          $('.trigger-key-save').click(function(e){
+            e.preventDefault();
+            var key = $('#field-key').val();
+            var val = $('#field-value').val();
+            if (val){
+              $.totalStorage(key, val);
+              alert('Saved value for ' + key);
+            } else {
+              alert('You need to enter a value, fool');
+            }
+          });
 
+          $('.trigger-key-get').click(function(e){
+            e.preventDefault();
+            var key = $('#field-key-get').val();
+            trace(key);
+            var val = $.totalStorage(key);
+            trace('val = ' + val);
+            if (val){
+              $('#value-output').html(val);
+            }
+          });
+
+      function refreshList(){
+        var list = $.totalStorage.getAllEmp();
+        /*for (var i = 0; i<list.length; i++){
+          if (i == list.length - 1){
+            str += 'and ' + list[i].key;
+          } else {
+            str += list[i].key + ', ';
+          }
+        }*/
+        //alert(list);
+        //$('.key-list').html(str);
+        return list;
+      }
+
+      function trace(m){
+        try {
+          console.log(m);
+        } catch(e){
+
+        }
+      }
+    });
+    </script>
 
 
     </head>
