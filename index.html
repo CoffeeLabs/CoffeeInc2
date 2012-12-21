@@ -66,62 +66,83 @@
     <!-- Lungo - Sandbox App -->
     <script type="text/javascript">
       $(document).ready(function(){
+          var nameArray=["PETER","CLEVELAND","MARVIN"];       
+          var surnameArray=["SMITH", "MITCHELL", "JONES", "KELLY", "WILLIAMS", "COOK","TAYLOR", "CARTER", "BROWN", "RICHARDSON", "DAVIES", "BAILEY", "EVANS", "COLLINS", "WILSON","BELL", "THOMAS", "SHAW", "JOHNSON", "MURPHY", "ROBERTS", "MILLER", "ROBINSON", "COX","THOMPSON", "RICHARDS", "WRIGHT", "KHAN", "WALKER", "MARSHALL", "WHITE", "ANDERSON","EDWARDS", "SIMPSON", "HUGHES", "ELLIS", "GREEN", "ADAMS", "HALL", "SINGH", "LEWIS","BEGUM", "HARRIS", "WILKINSON", "CLARKE", "FOSTER", "PATEL", "CHAPMAN", "JACKSON","POWELL", "WOOD", "WEBB", "TURNER", "ROGERS", "MARTIN", "GRAY", "COOPER", "MASON","HILL", "ALI", "WARD", "HUNT", "MORRIS", "HUSSAIN", "MOORE", "CAMPBELL", "CLARK", "MATTHEWS","LEE", "OWEN", "KING", "PALMER", "BAKER", "HOLMES", "HARRISON", "MILLS", "MORGAN", "BARNES","ALLEN", "KNIGHT", "JAMES", "LLOYD", "SCOTT", "BUTLER", "PHILLIPS", "RUSSELL", "WATSON","BARKER", "DAVIS", "FISHER", "PARKER", "STEVENS", "PRICE", "JENKINS", "BENNETT", "MURRAY","YOUNG", "DIXON", "GRIFFITHS", "HARVEY"];
+          
+        employeeInformation=[];
         if($.totalStorage.getItem("emp")){
-          alert("here");
           //$.totalStorage.deleteItem("emp");
-          employeeInformation=[];
-          //employeeInformation.push(new Array(0,0,0,0,0,0,0));
+          //employeeInformation.push([0,0,0,0,0,0,0]);
           //$.totalStorage("emp",employeeInformation);
           employeeInformation=$.totalStorage.getItem("emp");
         }else{
-          alert("first time");
-          employeeInformation=[];
           employeeInformation.push([0,0,0,0,0,0,0]);
           $.totalStorage("emp",employeeInformation);
         }
         paintEmpField();
-        $('.employee_hire_pic').click(function(e){
-          e.preventDefault();
-          var nameArray=["POWELL","MUSTAFA","COLES"];       
-          var surnameArray=["SMITH", "MITCHELL", "JONES", "KELLY", "WILLIAMS", "COOK",
-          "TAYLOR", "CARTER", "BROWN", "RICHARDSON", "DAVIES", "BAILEY", "EVANS", "COLLINS", "WILSON",
-          "BELL", "THOMAS", "SHAW", "JOHNSON", "MURPHY", "ROBERTS", "MILLER", "ROBINSON", "COX",
-          "THOMPSON", "RICHARDS", "WRIGHT", "KHAN", "WALKER", "MARSHALL", "WHITE", "ANDERSON",
-          "EDWARDS", "SIMPSON", "HUGHES", "ELLIS", "GREEN", "ADAMS", "HALL", "SINGH", "LEWIS",
-          "BEGUM", "HARRIS", "WILKINSON", "CLARKE", "FOSTER", "PATEL", "CHAPMAN", "JACKSON",
-          "POWELL", "WOOD", "WEBB", "TURNER", "ROGERS", "MARTIN", "GRAY", "COOPER", "MASON",
-          "HILL", "ALI", "WARD", "HUNT", "MORRIS", "HUSSAIN", "MOORE", "CAMPBELL", "CLARK", "MATTHEWS",
-          "LEE", "OWEN", "KING", "PALMER", "BAKER", "HOLMES", "HARRISON", "MILLS", "MORGAN", "BARNES",
-          "ALLEN", "KNIGHT", "JAMES", "LLOYD", "SCOTT", "BUTLER", "PHILLIPS", "RUSSELL", "WATSON",
-          "BARKER", "DAVIS", "FISHER", "PARKER", "STEVENS", "PRICE", "JENKINS", "BENNETT", "MURRAY",
-          "YOUNG", "DIXON", "GRIFFITHS", "HARVEY"];
-                    
-          var key = "emp";
-          var empPic=$("#newEmpPicId").val();
-          var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-          var empSkill=$("#newEmpSkill").val();
-          var empSat=$("#newEmpSat").val();
-          var empSalary=$("#newEmpSalary").val();
+        function hireEmployee(empPic,empName,empSkill,empSat,empSalary){
+          var key="emp";
           employeeInformation.pop();
-          employeeInformation.push(new Array(empPic,empName,empSkill,5,empSat,empSalary,empSalary));
-          employeeInformation.push(new Array(0,0 ,0,0,0,0,0));
+          employeeInformation.push([empPic,empName,empSkill,5,empSat,empSalary,empSalary]);
+          employeeInformation.push([0,0,0,0,0,0,0]);
           var val = employeeInformation;
           $.totalStorage(key, val);
           alert('Saved value for ' + key+": "+val);
-          //window.setTimeout("location.reload(true);",0);
           paintEmpField();
+        }
+        $('.employee_hire_pic1').click(function(e){
+          e.preventDefault();       
+          var empPic=$("#newEmpPicId1").val();
+          var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+          var empSkill=$("#newEmpSkill1").val();
+          var empSat=$("#newEmpSat1").val();
+          var empSalary=$("#newEmpSalary1").val();
+          hireEmployee(empPic,empName,empSkill,empSat,empSalary);
+        });
+        $('.employee_hire_pic2').click(function(e){
+          e.preventDefault();
+          var empPic=$("#newEmpPicId2").val();
+          var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+          var empSkill=$("#newEmpSkill2").val();
+          var empSat=$("#newEmpSat2").val();
+          var empSalary=$("#newEmpSalary2").val();
+          hireEmployee(empPic,empName,empSkill,empSat,empSalary);
+        });
+        $('.employee_hire_pic3').click(function(e){
+          e.preventDefault();
+          var empPic=$("#newEmpPicId3").val();
+          var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+          var empSkill=$("#newEmpSkill3").val();
+          var empSat=$("#newEmpSat3").val();
+          var empSalary=$("#newEmpSalary3").val();
+          hireEmployee(empPic,empName,empSkill,empSat,empSalary);
+        });
+        $('.employee_hire_pic4').click(function(e){
+          e.preventDefault();
+          var empPic=$("#newEmpPicId4").val();
+          var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+          var empSkill=$("#newEmpSkill4").val();
+          var empSat=$("#newEmpSat4").val();
+          var empSalary=$("#newEmpSalary4").val();
+          hireEmployee(empPic,empName,empSkill,empSat,empSalary);
         });
         $('.new_game').click(function(e){
           e.preventDefault();
           var key = "emp";
-          employeeInformation=new Arary();
-          employeeInformation.push(new Array(0,0 ,0,0,0,0,0));
+          employeeInformation=[];
+          employeeInformation.push([0,0,0,0,0,0,0]);
           var val = employeeInformation;
           $.totalStorage(key, val);
           alert('New Game with value for ' + key+": "+val+";");
           window.setTimeout("location.reload(true);",0);
           //paintEmpField();
         });
+        
+        $('.add').click(function(e){
+          e.preventDefault();
+          generateNewEmp();
+        });
+        
         $('.fireEmp').click(function(e){
           e.preventDefault();
           var key = "emp";
@@ -188,7 +209,7 @@
             }
             document.write("<div class='three columns'>");
             document.write("<a href='#employee_hire' data-router='section' id='emp"+x+"'>");
-            document.write("<img src='' id='empPic"+x+"'>");
+            document.write("<img src='' id='empPic"+x+"' onclick='generateNewEmp();'>");
             document.write("</a>");
             document.write("</div>");
             if(x!=0 && x%3==0)
@@ -281,7 +302,7 @@
     <!--//////////// EMPLOYEE PROFILE ////////////-->    
     <script type="text/javascript">
       for(var i=0;i<employeeInformation.length;i++){
-        document.write('<section id="employee_profile'+i+'" data-transition="slide">');
+        document.write('<section id="employee_profile" data-transition="slide">');
         document.write("<header data-title='"+employeeInformation[i][1]+"'>");
         document.write('<nav class="left box">');
         document.write('<a href="#back" data-router="section" data-icon="left"></a>');
@@ -328,15 +349,11 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp1">
               <script type="text/javascript">
-                var randomNumber=Math.floor(Math.random()*4)+1;
-                var randomSkill=Math.floor(Math.random()*100)+1;
-                var randomSat=Math.floor(Math.random()*100)+1;
-                var randomSalary=Math.floor(Math.random()*1500)+501;
-                document.write('<input type="hidden" id="newEmpPicId" value="'+randomNumber+'"><img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" id="hirePic1">');
+                document.write('<input type="hidden" id="newEmpPicId1" value="'+picId1+'"><img src="/CoffeeInc/assets/emp_'+picId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
                 document.write('<div class="hireinfo">');
-                document.write('<a data-icon="user"><input type="hidden" id="newEmpSkill" value="'+randomSkill+'">'+randomSkill+'</a>');
-                document.write('<a data-icon="home"><input type="hidden" id="newEmpSat" value="'+randomSat+'">'+randomSat+'</a>');
-                document.write('<a data-icon="left"><input type="hidden" id="newEmpSalary" value="'+randomSalary+'">'+randomSalary+'</a>');
+                document.write('<a data-icon="user"><input type="text" id="newEmpSkill1" value="'+randomSkill1+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomSat1+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="left"><input type="text" id="newEmpSalary1" value="'+randomSalary1+'" class="stat_item_inp"></a>');
                 document.write('</div>');
               </script>
             </a>
@@ -344,18 +361,11 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp2">
               <script type="text/javascript">
-                if(randomNumber==4)
-                  randomNumber=1;
-                else
-                  randomNumber++;
-                var randomSkill=Math.floor(Math.random()*100)+1;
-                var randomSat=Math.floor(Math.random()*100)+1;
-                var randomSalary=Math.floor(Math.random()*1500)+501;
-                document.write('<input type="hidden" id="newEmpPicId" value="'+randomNumber+'"><img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" id="hirePic2">');
+                document.write('<input type="hidden" id="newEmpPicId2" value="'+picId2+'"><img src="/CoffeeInc/assets/emp_'+picId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
                 document.write('<div class="hireinfo">');
-                document.write('<a data-icon="user"><input type="hidden" id="newEmpSkill" value="'+randomSkill+'">'+randomSkill+'</a>');
-                document.write('<a data-icon="home"><input type="hidden" id="newEmpSat" value="'+randomSat+'">'+randomSat+'</a>');
-                document.write('<a data-icon="left"><input type="hidden" id="newEmpSalary" value="'+randomSalary+'">'+randomSalary+'</a>');
+                document.write('<a data-icon="user"><input type="text" id="newEmpSkill2" value="'+randomSkill2+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomSat2+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="left"><input type="text" id="newEmpSalary2" value="'+randomSalary2+'" class="stat_item_inp"></a>');
                 document.write('</div>');
               </script>
             </a>
@@ -363,18 +373,11 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp3">
               <script type="text/javascript">
-                if(randomNumber==4)
-                  randomNumber=1;
-                else
-                  randomNumber++;
-                var randomSkill=Math.floor(Math.random()*100)+1;
-                var  randomSat=Math.floor(Math.random()*100)+1;
-                var randomSalary=Math.floor(Math.random()*1500)+501;
-                document.write('<input type="hidden" id="newEmpPicId" value="'+randomNumber+'"><img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" id="hirePic3">');
+                document.write('<input type="hidden" id="newEmpPicId3" value="'+picId3+'"><img src="/CoffeeInc/assets/emp_'+picId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
                 document.write('<div class="hireinfo">');
-                document.write('<a data-icon="user"><input type="hidden" id="newEmpSkill" value="'+randomSkill+'">'+randomSkill+'</a>');
-                document.write('<a data-icon="home"><input type="hidden" id="newEmpSat" value="'+randomSat+'">'+randomSat+'</a>');
-                document.write('<a data-icon="left"><input type="hidden" id="newEmpSalary" value="'+randomSalary+'">'+randomSalary+'</a>');
+                document.write('<a data-icon="user"><input type="text" id="newEmpSkill3" value="'+randomSkill3+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomSat3+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="left"><input type="text" id="newEmpSalary3" value="'+randomSalary3+'" class="stat_item_inp"></a>');
                 document.write('</div>');
               </script>
             </a>
@@ -382,18 +385,11 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp4">
               <script type="text/javascript">
-                if(randomNumber==4)
-                  randomNumber=1;
-                else
-                  randomNumber++;
-                var randomSkill=Math.floor(Math.random()*100)+1;
-                var randomSat=Math.floor(Math.random()*100)+1;
-                var randomSalary=Math.floor(Math.random()*1500)+501;
-                document.write('<input type="hidden" id="newEmpPicId" value="'+randomNumber+'"><img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" id="hirePic4">');
+                document.write('<input type="hidden" id="newEmpPicId4" value="'+picId4+'"><img src="/CoffeeInc/assets/emp_'+picId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
                 document.write('<div class="hireinfo">');
-                document.write('<a data-icon="user"><input type="hidden" id="newEmpSkill" value="'+randomSkill+'">'+randomSkill+'</a>');
-                document.write('<a data-icon="home"><input type="hidden" id="newEmpSat" value="'+randomSat+'">'+randomSat+'</a>');
-                document.write('<a data-icon="left"><input type="hidden" id="newEmpSalary" value="'+randomSalary+'">'+randomSalary+'</a>');
+                document.write('<a data-icon="user"><input type="text" id="newEmpSkill4" value="'+randomSkill4+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomSat4+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="left"><input type="text" id="newEmpSalary4" value="'+randomSalary4+'" class="stat_item_inp"></a>');
                 document.write('</div>');
               </script>
             </a>
