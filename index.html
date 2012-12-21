@@ -66,8 +66,8 @@
     <!-- Lungo - Sandbox App -->
     <script type="text/javascript">
       $(document).ready(function(){
-          var nameArray=["PETER","CLEVELAND","MARVIN"];       
-          var surnameArray=["SMITH", "MITCHELL", "JONES", "KELLY", "WILLIAMS", "COOK","TAYLOR", "CARTER", "BROWN", "RICHARDSON", "DAVIES", "BAILEY", "EVANS", "COLLINS", "WILSON","BELL", "THOMAS", "SHAW", "JOHNSON", "MURPHY", "ROBERTS", "MILLER", "ROBINSON", "COX","THOMPSON", "RICHARDS", "WRIGHT", "KHAN", "WALKER", "MARSHALL", "WHITE", "ANDERSON","EDWARDS", "SIMPSON", "HUGHES", "ELLIS", "GREEN", "ADAMS", "HALL", "SINGH", "LEWIS","BEGUM", "HARRIS", "WILKINSON", "CLARKE", "FOSTER", "PATEL", "CHAPMAN", "JACKSON","POWELL", "WOOD", "WEBB", "TURNER", "ROGERS", "MARTIN", "GRAY", "COOPER", "MASON","HILL", "ALI", "WARD", "HUNT", "MORRIS", "HUSSAIN", "MOORE", "CAMPBELL", "CLARK", "MATTHEWS","LEE", "OWEN", "KING", "PALMER", "BAKER", "HOLMES", "HARRISON", "MILLS", "MORGAN", "BARNES","ALLEN", "KNIGHT", "JAMES", "LLOYD", "SCOTT", "BUTLER", "PHILLIPS", "RUSSELL", "WATSON","BARKER", "DAVIS", "FISHER", "PARKER", "STEVENS", "PRICE", "JENKINS", "BENNETT", "MURRAY","YOUNG", "DIXON", "GRIFFITHS", "HARVEY"];
+          var nameArray=["Homer","Peter","Fry","Cleveland","Glenn","Joe","Bender"];       
+          var surnameArray=["SMITH", "MITCHELL", "JONES", "KELLY", "WILLIAMS", "COOK","TAYLOR", "CARTER", "BROWN", "RICHARDSON", "DAVIES", "BAILEY", "EVANS", "COLLINS", "WILSON","BELL", "THOMAS", "SHAW", "JOHNSON", "MURPHY", "ROBERTS", "MILLER", "ROBINSON", "COX","THOMPSON", "RICHARDS", "WRIGHT", "KHAN", "WALKER", "MARSHALL", "WHITE", "ANDERSON","EDWARDS", "SIMPSON", "HUGHES", "ELLIS", "GREEN", "ADAMS", "HALL", "SINGH", "LEWIS","BEGUM", "HARRIS", "WILKINSON", "CLARKE", "FOSTER", "PATEL", "CHAPMAN", "JACKSON","POWELL", "WOOD", "WEBB", "TURNER", "ROGERS", "MARTIN", "GRAY", "COOPER", "MASON","HILL", "ALI", "WARD", "HUNT", "MORRIS", "HUSSAIN", "MOORE", "CAMPBELL", "CLARK", "MATTHEWS","LEE", "OWEN", "KING", "PALMER", "BAKER", "HOLMES", "HARRISON", "MILLS", "MORGAN", "BARNES","ALLEN", "KNIGHT", "JAMES", "LLOYD", "SCOTT", "BUTLER", "PHILLIPS", "RUSSELL", "WATSON","BARKER", "DAVIS", "FISHER", "PARKER", "STEVENS", "PRICE", "JENKINS", "BENNETT", "MURRAY","YOUNG", "DIXON", "GRIFFIN", "HARVEY"];
           
         employeeInformation=[];
         if($.totalStorage.getItem("emp")){
@@ -178,7 +178,7 @@
     <!--//////////// MAIN VIEW ////////////-->
     <!--//////////// Employees, Investors, Main Menu with bottom bar ////////////-->
     <section id="main-view" data-transition="slide">
-      <header id="head_items">
+      <header id="head_items" class="brownbg">
         <div data-icon="home" class="statusbar_item">
           <input type="text" readonly value="99" id="stat_product" class="stat_item_inp">
         </div>
@@ -285,7 +285,7 @@
       <!--------------- Menu with bottom bar --------------->      
 
       <footer>
-        <nav>
+        <nav class="brownbg">
           <a href="#employees" data-router="article" class="current" data-icon="user"></a>
           <a href="#investors" data-router="article" data-icon="inbox"></a>
           <a href="#menu-ingame" data-router="article" data-icon="settings"></a>
@@ -302,13 +302,13 @@
     <!--//////////// EMPLOYEE PROFILE ////////////-->    
     <script type="text/javascript">
       for(var i=0;i<employeeInformation.length;i++){
-        document.write('<section id="employee_profile" data-transition="slide">');
+        document.write('<section id="employee_profile'+i+'" data-transition="slide">');
         document.write("<header data-title='"+employeeInformation[i][1]+"'>");
         document.write('<nav class="left box">');
         document.write('<a href="#back" data-router="section" data-icon="left"></a>');
         document.write('</nav>');
         document.write('<nav class="right box">');
-        document.write('<a href="#back" data-router="section" data-icon="close" data-label="Fire" class="fireEmp"></a>');
+        document.write('<a href="#back" data-router="section" data-icon="close" data-label="Fire" class="fireEmp'+i+'"></a>');
         document.write("<input type='hidden' id='fireEmpId' value='"+i+"'>");
         document.write('</nav>');
         document.write("</header>");
@@ -324,7 +324,7 @@
         document.write('<div id="progress-normal" data-progress="'+employeeInformation[i][4]+'%"></div>');
         document.write('<label id="empProfileSalary">Salary:   '+employeeInformation[i][5]+'</label>');
         document.write('<input type="range" data-progress="10%" />');
-        document.write('</form>');
+        document.write("</form>");
 
         document.write('</article>');
         document.write('</section>');
@@ -337,7 +337,7 @@
     <!--//////////// HIRE EMPLOYEES ////////////-->    
 
     <section id="employee_hire" data-transition="slide">
-      <header data-title="Hire New Employees">
+      <header data-title="Hire New Employees" class="brownbg">
         <nav class="left box">
           <a href="#back" data-router="section" data-icon="left"></a>
         </nav>
@@ -352,8 +352,8 @@
                 document.write('<input type="hidden" id="newEmpPicId1" value="'+picId1+'"><img src="/CoffeeInc/assets/emp_'+picId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
                 document.write('<div class="hireinfo">');
                 document.write('<a data-icon="user"><input type="text" id="newEmpSkill1" value="'+randomSkill1+'" class="stat_item_inp"></a>');
-                document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomSat1+'" class="stat_item_inp"></a>');
-                document.write('<a data-icon="left"><input type="text" id="newEmpSalary1" value="'+randomSalary1+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomSat1+'" class="stat_item_inp"></a></br>');
+                document.write('<a data-icon="left"><input type="text" id="newEmpSalary1" value="'+randomSalary1+'" class="stat_item_inp_sal"></a>');
                 document.write('</div>');
               </script>
             </a>
@@ -364,8 +364,8 @@
                 document.write('<input type="hidden" id="newEmpPicId2" value="'+picId2+'"><img src="/CoffeeInc/assets/emp_'+picId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
                 document.write('<div class="hireinfo">');
                 document.write('<a data-icon="user"><input type="text" id="newEmpSkill2" value="'+randomSkill2+'" class="stat_item_inp"></a>');
-                document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomSat2+'" class="stat_item_inp"></a>');
-                document.write('<a data-icon="left"><input type="text" id="newEmpSalary2" value="'+randomSalary2+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomSat2+'" class="stat_item_inp"></a></br>');//hack
+                document.write('<a data-icon="left"><input type="text" id="newEmpSalary2" value="'+randomSalary2+'" class="stat_item_inp_sal"></a>');
                 document.write('</div>');
               </script>
             </a>
@@ -376,8 +376,8 @@
                 document.write('<input type="hidden" id="newEmpPicId3" value="'+picId3+'"><img src="/CoffeeInc/assets/emp_'+picId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
                 document.write('<div class="hireinfo">');
                 document.write('<a data-icon="user"><input type="text" id="newEmpSkill3" value="'+randomSkill3+'" class="stat_item_inp"></a>');
-                document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomSat3+'" class="stat_item_inp"></a>');
-                document.write('<a data-icon="left"><input type="text" id="newEmpSalary3" value="'+randomSalary3+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomSat3+'" class="stat_item_inp"></a></br>');
+                document.write('<a data-icon="left"><input type="text" id="newEmpSalary3" value="'+randomSalary3+'" class="stat_item_inp_sal"></a>');
                 document.write('</div>');
               </script>
             </a>
@@ -388,8 +388,8 @@
                 document.write('<input type="hidden" id="newEmpPicId4" value="'+picId4+'"><img src="/CoffeeInc/assets/emp_'+picId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
                 document.write('<div class="hireinfo">');
                 document.write('<a data-icon="user"><input type="text" id="newEmpSkill4" value="'+randomSkill4+'" class="stat_item_inp"></a>');
-                document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomSat4+'" class="stat_item_inp"></a>');
-                document.write('<a data-icon="left"><input type="text" id="newEmpSalary4" value="'+randomSalary4+'" class="stat_item_inp"></a>');
+                document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomSat4+'" class="stat_item_inp"></a></br>');
+                document.write('<a data-icon="left"><input type="text" id="newEmpSalary4" value="'+randomSalary4+'" class="stat_item_inp_sal"></a>');
                 document.write('</div>');
               </script>
             </a>
@@ -433,121 +433,3 @@
     </script>
   </body>
 </html>
-<!--<div class="three rows">
-                    <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(1);" id="emp1"><script type="text/javascript">
-                       
-                        if(employeeInformation[1].picId>=0){
-                            if(employeeInformation[1].picId!=0)
-                                document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[1].picId + ".svg' id='empPic1'>");
-                            else{
-                                document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                document.getElementById("emp1").href="#employee_hire";
-                            }
-                        }
-                        </script></a>
-                </div>
-                <div class="three rows">
-                    <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(2);" id="emp2"><script type="text/javascript">
-<!--
-if(employeeInformation[2].picId>=0){
-    if(employeeInformation[2].picId!=0)
-        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[2].picId + ".svg' id='empPic00'>");
-    else{
-        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-        document.getElementById("emp2").href="#employee_hire";
-    }
-}
-</script></a>
-</div>
-</div>
-
-
-<div class="three columns">
-<div class="three rows">
-<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(3);" id="emp3"><script type="text/javascript">
-<!--
-if(employeeInformation[3].picId>=0){
-    if(employeeInformation[3].picId!=0)
-        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[3].picId + ".svg' id='empPic3'>");
-    else{
-        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-        document.getElementById("emp3").href="#employee_hire";
-    }
-}
-</script></a>
-</div>
-<div class="three rows">
-<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(4);" id="emp4"><script type="text/javascript">
-<!--
-if(employeeInformation[4].picId>=0){
-    if(employeeInformation[4].picId!=0)
-        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[4].picId + ".svg' id='empPic4'>");
-    else{
-        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-        document.getElementById("emp4").href="#employee_hire";
-    }
-}
-</script></a>
-</div>
-<div class="three rows">
-<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(5);" id="emp5"><script type="text/javascript">
-<!--
-if(employeeInformation[5].picId>=0){
-    if(employeeInformation[5].picId!=0)
-        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[5].picId + ".svg' id='empPic5'>");
-    else{
-        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-        document.getElementById("emp5").href="#employee_hire";
-    }
-}
-</script></a>
-</div>
-</div>
-
-<div class="three columns">
-<div class="three rows">
-<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(6);" id="emp6"><script type="text/javascript">
-<!--
-if(employeeInformation[6].picId>=0){
-    if(employeeInformation[6].picId!=0)
-        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[6].picId + ".svg' id='empPic6'>");
-    else{
-        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-        document.getElementById("emp6").href="#employee_hire";
-    }
-}
-</script></a>
-</div>
-<div class="three rows">
-<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(7);" id="emp7">
-<script type="text/javascript">
-<!--
-if(employeeInformation[7].picId>=0){
-    if(employeeInformation[7].picId!=0)
-        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[7].picId + ".svg' id='empPic7'>");
-    else{
-        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-        document.getElementById("emp7").href="#employee_hire";
-    }
-}
-
-</script>
-</a>
-</div>
-<div class="three rows">
-<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(8);" id="emp8">
-<script type="text/javascript">
-<!--
-if(employeeInformation[8].picId>=0){
-    if(employeeInformation[8].picId!=0)
-        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[8].picId + ".svg' id='empPic8'>");
-    else{
-        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-        document.getElementById("emp8").href="#employee_hire";
-    }
-}
-
-</script>
-</a>
-</div>
-</div>-->
