@@ -131,24 +131,29 @@ label {
 	border: 2px solid #666;
 }
 button {
-	background-color: #bbb;
-	border: 2px solid #666;
+	background-color: #4d3321;
+	border: 2px solid black;
 	border-radius: 10px;	
 	font-weight: bold;
 	font-size: 16px;
 	width: 100%;
 	height: 50px;
+	color: white;
 }	
 .brownbg {
 	background-color: #4d3321 !important;
-	border: 2px solid black !important;
-	
+	border: none !important;
+	/*border: 2px solid black !important;
+	*/
 }	
 .brownbg > * > * {
-	color: white !important;
+	color: white !important;	
 }
 footer > .brownbg > * {
-	border: 1px solid black !important;
+	border-top: 2px solid black !important;
+}
+header.brownbg > * {
+	border-bottom: 2px solid black !important;
 }
 .brownbg > *:* {
 	color: red !important;
