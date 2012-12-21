@@ -1,551 +1,557 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Coffee Inc.</title>
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="format-detection" content="telephone=no">
-        <meta http-equiv="cleartype" content="on">
+  <head>
+    <meta charset="utf-8">
+    <title>Coffee Inc.</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
 
-        <!-- iPhone -->
-        <link href="http://lungo.tapquo.com/resources/icon-57.png" sizes="57x57" rel="apple-touch-icon">
-        <link href="http://lungo.tapquo.com/resources/startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px)
-              and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+    <!-- iPhone -->
+    <link href="http://lungo.tapquo.com/resources/icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px)
+          and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
 
-        <!-- iPhone (Retina) -->
-        <link href="http://lungo.tapquo.com/resources/icon-114.png" sizes="114x114" rel="apple-touch-icon">
-        <link href="http://lungo.tapquo.com/resources/startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px)
-              and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPhone (Retina) -->
+    <link href="http://lungo.tapquo.com/resources/icon-114.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px)
+          and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
-        <!-- iPhone 5 -->
-        <link href="http://lungo.tapquo.com/resources/startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px)
-              and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPhone 5 -->
+    <link href="http://lungo.tapquo.com/resources/startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px)
+          and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
-        <!-- iPad -->
-        <link href="http://lungo.tapquo.com/resources/icon-72.png" sizes="72x72" rel="apple-touch-icon">
-        <link href="http://lungo.tapquo.com/resources/startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
-              and (orientation: portrait)
-              and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
-        <link href="http://lungo.tapquo.com/resources/startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
-              and (orientation: landscape)
-              and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+    <!-- iPad -->
+    <link href="http://lungo.tapquo.com/resources/icon-72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
+          and (orientation: portrait)
+          and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+    <link href="http://lungo.tapquo.com/resources/startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
+          and (orientation: landscape)
+          and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
 
-        <!-- iPad (Retina) -->
-        <link href="http://lungo.tapquo.com/resources/icon-144.png" sizes="144x144" rel="apple-touch-icon">
-        <link href="http://lungo.tapquo.com/resources/startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
-              and (orientation: portrait)
-              and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-        <link href="http://lungo.tapquo.com/resources/startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
-              and (orientation: landscape)
-              and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPad (Retina) -->
+    <link href="http://lungo.tapquo.com/resources/icon-144.png" sizes="144x144" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
+          and (orientation: portrait)
+          and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="http://lungo.tapquo.com/resources/startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
+          and (orientation: landscape)
+          and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
-        <!-- Lungo - Stylesheets -->
-        <!--    
-            <link rel="stylesheet" href="components/lungo/lungo.css">
-        -->    
-        <link rel="stylesheet" href="lib/components/lungo/lungo.icon.css">
-        <link rel="stylesheet" href="lib/components/lungo/lungo.icon.brand.css">
-        <link rel="stylesheet" href="lib/components/lungo/lungo.theme.default.css">
-        <link rel="stylesheet" href="lib/extra.css">
-        <link rel="stylesheet" href="lib/combined.css">
+    <!-- Lungo - Stylesheets -->
+    <!--    
+        <link rel="stylesheet" href="components/lungo/lungo.css">
+    -->    
+    <link rel="stylesheet" href="lib/components/lungo/lungo.icon.css">
+    <link rel="stylesheet" href="lib/components/lungo/lungo.icon.brand.css">
+    <link rel="stylesheet" href="lib/components/lungo/lungo.theme.default.css">
+    <link rel="stylesheet" href="lib/extra.css">
+    <link rel="stylesheet" href="lib/combined.css">
 
 
 
-        <!-- Lungo - Dependencies -->
-        <script src="lib/components/quojs/quo.js"></script>
-        <script src="lib/components/lungo/lungo.js"></script>
+    <!-- Lungo - Dependencies -->
+    <script src="lib/components/quojs/quo.js"></script>
+    <script src="lib/components/lungo/lungo.js"></script>
 
-        <script src="lib/jquery.js"></script>        
-        <script src="lib/jquery.total-storage.js"></script>                
-        <script src="lib/coffeeinc.js"></script>
-        <!-- Lungo - Sandbox App -->
-      <script type="text/javascript">
-        $(document).ready(function(){
-          if(refreshList().length!=0){
-            //save local storage to variables
-          }
-          $('.trigger-key-save').click(function(e){
-            e.preventDefault();
-            var key = $('#field-key').val();
-            var val = $('#field-value').val();
-            if (val){
-              $.totalStorage(key, val);
-              alert('Saved value for ' + key);
-            } else {
-              alert('You need to enter a value, fool');
-            }
-          });
-
-          $('.trigger-key-get').click(function(e){
-            e.preventDefault();
-            var key = $('#field-key-get').val();
-            trace(key);
-            var val = $.totalStorage(key);
-            trace('val = ' + val);
-            if (val){
-              $('#value-output').html(val);
-            }
-          });
-
-      function refreshList(){
-        var list = $.totalStorage.getAllEmp();
-        /*for (var i = 0; i<list.length; i++){
-          if (i == list.length - 1){
-            str += 'and ' + list[i].key;
-          } else {
-            str += list[i].key + ', ';
-          }
-        }*/
-        //alert(list);
-        //$('.key-list').html(str);
-        return list;
-      }
-
-      function trace(m){
-        try {
-          console.log(m);
-        } catch(e){
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+    <script src="lib/jquery.total-storage.js"></script>                
+    <script src="lib/coffeeinc.js"></script>
+    <!-- Lungo - Sandbox App -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        if($.totalStorage.getItem("emp")){
+          alert("here");
+          //$.totalStorage.deleteItem("emp");
+          employeeInformation=[];
+          //employeeInformation.push(new Array(0,0,0,0,0,0,0));
+          //$.totalStorage("emp",employeeInformation);
+          employeeInformation=$.totalStorage.getItem("emp");
+        }else{
+          alert("first time");
+          employeeInformation=[];
+          employeeInformation.push([0,0,0,0,0,0,0]);
+          $.totalStorage("emp",employeeInformation);
         }
-      }
-    });
+        paintEmpField();
+        $('.employee_hire_pic').click(function(e){
+          e.preventDefault();
+          var nameArray=["POWELL","MUSTAFA","COLES"];       
+          var surnameArray=["SMITH", "MITCHELL", "JONES", "KELLY", "WILLIAMS", "COOK",
+          "TAYLOR", "CARTER", "BROWN", "RICHARDSON", "DAVIES", "BAILEY", "EVANS", "COLLINS", "WILSON",
+          "BELL", "THOMAS", "SHAW", "JOHNSON", "MURPHY", "ROBERTS", "MILLER", "ROBINSON", "COX",
+          "THOMPSON", "RICHARDS", "WRIGHT", "KHAN", "WALKER", "MARSHALL", "WHITE", "ANDERSON",
+          "EDWARDS", "SIMPSON", "HUGHES", "ELLIS", "GREEN", "ADAMS", "HALL", "SINGH", "LEWIS",
+          "BEGUM", "HARRIS", "WILKINSON", "CLARKE", "FOSTER", "PATEL", "CHAPMAN", "JACKSON",
+          "POWELL", "WOOD", "WEBB", "TURNER", "ROGERS", "MARTIN", "GRAY", "COOPER", "MASON",
+          "HILL", "ALI", "WARD", "HUNT", "MORRIS", "HUSSAIN", "MOORE", "CAMPBELL", "CLARK", "MATTHEWS",
+          "LEE", "OWEN", "KING", "PALMER", "BAKER", "HOLMES", "HARRISON", "MILLS", "MORGAN", "BARNES",
+          "ALLEN", "KNIGHT", "JAMES", "LLOYD", "SCOTT", "BUTLER", "PHILLIPS", "RUSSELL", "WATSON",
+          "BARKER", "DAVIS", "FISHER", "PARKER", "STEVENS", "PRICE", "JENKINS", "BENNETT", "MURRAY",
+          "YOUNG", "DIXON", "GRIFFITHS", "HARVEY"];
+                    
+          var key = "emp";
+          var empPic=$("#newEmpPicId").val();
+          var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+          var empSkill=$("#newEmpSkill").val();
+          var empSat=$("#newEmpSat").val();
+          var empSalary=$("#newEmpSalary").val();
+          employeeInformation.pop();
+          employeeInformation.push(new Array(empPic,empName,empSkill,5,empSat,empSalary,empSalary));
+          employeeInformation.push(new Array(0,0 ,0,0,0,0,0));
+          var val = employeeInformation;
+          $.totalStorage(key, val);
+          alert('Saved value for ' + key+": "+val);
+          //window.setTimeout("location.reload(true);",0);
+          paintEmpField();
+        });
+        $('.new_game').click(function(e){
+          e.preventDefault();
+          var key = "emp";
+          employeeInformation=new Arary();
+          employeeInformation.push(new Array(0,0 ,0,0,0,0,0));
+          var val = employeeInformation;
+          $.totalStorage(key, val);
+          alert('New Game with value for ' + key+": "+val+";");
+          window.setTimeout("location.reload(true);",0);
+          //paintEmpField();
+        });
+        $('.fireEmp').click(function(e){
+          e.preventDefault();
+          var key = "emp";
+          employeeInformation.splice($("#empId").val(),1);
+          var val = employeeInformation;
+          $.totalStorage(key, val);
+          alert('Employee got fired! new value for key ' + key+": "+val+";");
+          window.setTimeout("location.reload(true);",0);
+          //paintEmpField();
+        });
+        function getAllEmp(){
+          return $.totalStorage.getAllEmp();
+        }
+        function trace(m){
+          try {
+            console.log(m);
+          } catch(e){
+
+          }
+        }
+      });
     </script>
 
 
-    </head>
+  </head>
 
 
-    <body class="app">
-
-
-
-
-        <!--//////////// MAIN VIEW ////////////-->
-        <!--//////////// Employees, Investors, Main Menu with bottom bar ////////////-->
-        <section id="main-view" data-transition="slide">
-            <header id="head_items" class="brownbg">
-                <div data-icon="home" class="statusbar_item">
-                  <input type="text" readonly value="99" id="stat_product" class="stat_item_inp">
-                </div>
-                <div data-icon="right" class="statusbar_item">
-                  <input type="text" readonly value="99" id="stat_talent" class="stat_item_inp">
-                </div>
-                <div data-icon="user" class="statusbar_item">
-                  <input type="text" readonly value="99" id="stat_patents" class="stat_item_inp">
-                </div>
-                <div data-icon="upload" class="statusbar_item">
-                  <input type="text" readonly value="99" id="stat_sat" class="stat_item_inp">
-                </div>
-                <div data-icon="up" class="statusbar_item">
-                  <input type="text" readonly value="99" id="stat_invint" class="stat_item_inp">
-                </div>
-                <div data-icon="left" class="statusbar_item">
-                  <input type="text" readonly value="93559" id="stat_product" class="stat_item_inp">
-                </div>
-                <!--
-                <div data-icon="home" class="statusbar_item"> 99</div>                
-                <div data-icon="users" class="statusbar_item"> 58</div>
-                <div data-icon="upload" class="statusbar_item"> 43</div>
-                <div data-icon="map" class="statusbar_item"> 33</div>
-                <div data-icon="cloud" class="statusbar_item"> 34</div>
-                <div data-icon="menu" class="statusbar_item"> 51,234</div>-->
-            </header>
-
-
-            <!-- ------------- Grid of Employees ------------- -->
-            <article id="employees" class="employee_grid">
-
-                <div class="three columns">
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(0);" id="emp0"><script type="text/javascript">
-                            <!--
-                            if(employeeInformation[0].picId>=0){
-                                if(employeeInformation[0].picId!=0)
-                                    document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[0].picId + ".svg' id='empPic0'>");
-                                else{
-                                    document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                    document.getElementById("emp0").href="#employee_hire";
-                        }
-                    }
-                    //--></script></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(1);" id="emp1"><script type="text/javascript">
-                            <!--
-                            if(employeeInformation[1].picId>=0){
-                                if(employeeInformation[1].picId!=0)
-                                    document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[1].picId + ".svg' id='empPic1'>");
-                                else{
-                                    document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                    document.getElementById("emp1").href="#employee_hire";
-                        }
-                    }
-                    //--></script></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(2);" id="emp2"><script type="text/javascript">
-                            <!--
-                            if(employeeInformation[2].picId>=0){
-                                if(employeeInformation[2].picId!=0)
-                                    document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[2].picId + ".svg' id='empPic00'>");
-                                else{
-                                    document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                    document.getElementById("emp2").href="#employee_hire";
-                        }
-                    }
-                    //--></script></a>
-                    </div>
-                </div>
-
-
-                <div class="three columns">
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(3);" id="emp3"><script type="text/javascript">
-                            <!--
-                            if(employeeInformation[3].picId>=0){
-                                if(employeeInformation[3].picId!=0)
-                                    document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[3].picId + ".svg' id='empPic3'>");
-                                else{
-                                    document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                    document.getElementById("emp3").href="#employee_hire";
-                        }
-                    }
-                    //--></script></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(4);" id="emp4"><script type="text/javascript">
-                            <!--
-                            if(employeeInformation[4].picId>=0){
-                                if(employeeInformation[4].picId!=0)
-                                    document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[4].picId + ".svg' id='empPic4'>");
-                                else{
-                                    document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                    document.getElementById("emp4").href="#employee_hire";
-                        }
-                    }
-                    //--></script></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(5);" id="emp5"><script type="text/javascript">
-                            <!--
-                            if(employeeInformation[5].picId>=0){
-                                if(employeeInformation[5].picId!=0)
-                                    document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[5].picId + ".svg' id='empPic5'>");
-                                else{
-                                    document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                    document.getElementById("emp5").href="#employee_hire";
-                        }
-                    }
-                    //--></script></a>
-                    </div>
-                </div>
-
-                <div class="three columns">
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(6);" id="emp6"><script type="text/javascript">
-                            <!--
-                            if(employeeInformation[6].picId>=0){
-                                if(employeeInformation[6].picId!=0)
-                                    document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[6].picId + ".svg' id='empPic6'>");
-                                else{
-                                    document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                    document.getElementById("emp6").href="#employee_hire";
-                        }
-                    }
-                    //--></script></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(7);" id="emp7">
-                            <script type="text/javascript">
-                                <!--
-                                if(employeeInformation[7].picId>=0){
-                                    if(employeeInformation[7].picId!=0)
-                                        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[7].picId + ".svg' id='empPic7'>");
-                                    else{
-                                        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                        document.getElementById("emp7").href="#employee_hire";
-                                    }
-                                }
-                                //-->
-                            </script>
-                        </a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(8);" id="emp8">
-                            <script type="text/javascript">
-                                <!--
-                                if(employeeInformation[8].picId>=0){
-                                    if(employeeInformation[8].picId!=0)
-                                        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[8].picId + ".svg' id='empPic8'>");
-                                    else{
-                                        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
-                                        document.getElementById("emp8").href="#employee_hire";
-                                    }
-                                }
-                                //-->
-                            </script>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="one column"></div>          
-
-            </article>
-            <!--------------- END --------------->        
-            <!--------------- Grid of Employees --------------->
-
-
-
-            <!--------------- Grid of Investors --------------->
-            <article id="investors" class="employee_grid">
-
-                <div class="three columns">
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                </div>
-
-
-                <div class="three columns">
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                </div>
-
-                <div class="three columns">
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                    <div class="three rows">
-                        <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-                    </div>
-                </div>
-
-                <div class="one column"></div>          
-
-            </article>
-            <!--------------- END --------------->        
-            <!--------------- Grid of Investors --------------->
-
-
-            <!--------------- Menu with bottom bar --------------->        
-            <article id="menu-ingame" class="list">      	
-                <form class="margined">
-                    <img src="assets/gamelogo.svg" class="gamelogo">  
-                    <div class="menu-elements">
-                        <!--      	  
-                        <a href="#employees" data-router="article" class="button">Resume</a>           
-                        -->
-                        <a href="menu.html" class="button">Log Out</a>
-                        <a href="" class="red button">Sound Off</a>            	
-                    </div>
-                </form>
-            </article>
-
-            <!--------------- END --------------->                
-            <!--------------- Menu with bottom bar --------------->      
-
-
-
-            <footer>
-                <nav class="brownbg">
-                    <a href="#employees" data-router="article" class="current" data-icon="user"></a>
-                    <a href="#investors" data-router="article" data-icon="inbox"></a>
-                    <a href="#menu-ingame" data-router="article" data-icon="settings"></a>
-                </nav>
-            </footer>
-
-
-        </section>
-        <!-- /////////// END /////////// -->
-        <!--//////////// MAIN VIEW ////////////-->
-
-
-
-        <!--//////////// EMPLOYEE PROFILE ////////////-->    
-
-        <section id="employee_profile" data-transition="slide">
-            <header data-title="John Doe">
-                <nav class="left box">
-                    <a href="#back" data-router="section" data-icon="left"></a>
-                </nav>
-                <nav class="right box">
-                    <a href="#back" data-router="section" data-icon="close" data-label="Fire"></a>
-                </nav>
-            </header>
-
-
-            <article class="scroll">
-                <form class="margined">
-
-                    <script type="text/javascript">document.write("<img src='/CoffeeInc/assets/emp_" + empPicId + ".svg' id='emp_profile_pic' >");</script>		        
-
-                    <label id="empProfileSkill">Skill:   <script type="text/javascript">document.write(empSkill);</script>	</label>
-                    <div id="empProfileSkillBar">
-                    </div>
-                    <!--<script type="text/javascript">document.write('<div id="progress-normal" data-progress="'+empSkill+'%"></div>');</script>
-                    -->
-                    <label id="empProfileSat">Satisfaction:   <script type="text/javascript">document.write(empSat);</script></label>
-                    <div id="empProfileSatBar">
-                    </div>
-                    <!--<script type="text/javascript">document.write('<div id="progress-normal" data-progress="'+empSat+'%"></div>');</script>
-                    -->
-                    <label id="empProfileSalary">Salary:   <script type="text/javascript">document.write(empSalary);</script></label>
-                    <!--<input type="range" data-progress="10%" placeholder="type your name" />
-                    -->
-                </form>
-
-            </article>
-        </section>
-        <!-- /////////// END /////////// -->
-        <!--//////////// EMPLOYEE PROFILE ////////////-->
-
-
-        <!--//////////// HIRE EMPLOYEES ////////////-->    
-
-        <section id="employee_hire" data-transition="slide">
-            <header data-title="Hire New Employees">
-                <nav class="left box">
-                    <a href="#back" data-router="section" data-icon="left"></a>
-                </nav>
-            </header>
-
-
-            <article class="scroll">
-                <div class="five rows">
-                    <div class="five columns">
-                        <a href="#back" data-router="section" id="randomEmp1">
-                        <script type="text/javascript">
-                            var randomNumber=Math.floor(Math.random()*4)+1;
-                            var randomSkill=Math.floor(Math.random()*100)+1;
-                            var randomSat=Math.floor(Math.random()*100)+1;
-                            var randomSalary=Math.floor(Math.random()*1500)+501;
-                            //document.getElementById("randomEmp1").onclick="hireEmployee("+hireTmpX+","+hireTmpY+","+randomNumber+","+randomSkill+","+randomSat+","+randomSalary+")";
-                            document.write('<img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" onclick="javascript:hireEmployee('+randomNumber+','+randomSkill+','+randomSat+','+randomSalary+');">');
-                            document.write('<div class="hireinfo">');
-                            document.write('<a data-icon="user">'+randomSkill+'</a>');
-                            document.write('<a data-icon="home">'+randomSat+'</a>');
-                            document.write('<a data-icon="left">'+randomSalary+'</a>');
-                            document.write('</div>');
-                        </script>
-                        </a>
-                    </div>		    			    
-                    <div class="five columns">
-                        <a href="#back" data-router="section" id="randomEmp2">
-                        <script type="text/javascript">
-                            if(randomNumber==4)
-                                randomNumber=1;
-                            else
-                                randomNumber++;
-                            var randomSkill=Math.floor(Math.random()*100)+1;
-                            var randomSat=Math.floor(Math.random()*100)+1;
-                            var randomSalary=Math.floor(Math.random()*1500)+501;
-                            //document.getElementById("randomEmp2").onclick="hireEmployee("+hireTmpX+","+hireTmpY+","+randomNumber+","+randomSkill+","+randomSat+","+randomSalary+")";
-                            document.write('<img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" onclick="javascript:hireEmployee('+randomNumber+','+randomSkill+','+randomSat+','+randomSalary+');">');
-                            document.write('<div class="hireinfo">');
-                            document.write('<a data-icon="user">'+randomSkill+'</a>');
-                            document.write('<a data-icon="home">'+randomSat+'</a>');
-                            document.write('<a data-icon="left">'+randomSalary+'</a>');
-                            document.write('</div>');
-                        </script>
-                        </a>
-                    </div>
-                    <div class="five columns">
-                        <a href="#back" data-router="section" id="randomEmp3">
-                        <script type="text/javascript">
-                            if(randomNumber==4)
-                                randomNumber=1;
-                            else
-                                randomNumber++;
-                            var randomSkill=Math.floor(Math.random()*100)+1;
-                            var randomSat=Math.floor(Math.random()*100)+1;
-                            var randomSalary=Math.floor(Math.random()*1500)+501;
-                            //document.getElementById("randomEmp3").onclick="javascript:hireEmployee("+hireTmpX+","+hireTmpY+","+randomNumber+","+randomSkill+","+randomSat+","+randomSalary+");";
-                            document.write('<img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" onclick="javascript:hireEmployee('+randomNumber+','+randomSkill+','+randomSat+','+randomSalary+');">');
-                            document.write('<div class="hireinfo">');
-                            document.write('<a data-icon="user">'+randomSkill+'</a>');
-                            document.write('<a data-icon="home">'+randomSat+'</a>');
-                            document.write('<a data-icon="left">'+randomSalary+'</a>');
-                            document.write('</div>');
-                        </script>
-                        </a>
-                    </div>
-                    <div class="five columns">
-                        <a href="#back" data-router="section" id="randomEmp4">
-                        <script type="text/javascript">
-                            if(randomNumber==4)
-                                randomNumber=1;
-                            else
-                                randomNumber++;
-                            var randomSkill=Math.floor(Math.random()*100)+1;
-                            var randomSat=Math.floor(Math.random()*100)+1;
-                            var randomSalary=Math.floor(Math.random()*1500)+501;
-                            //document.getElementById("randomEmp4").onclick="javascript:hireEmployee("+hireTmpX+","+hireTmpY+","+randomNumber+","+randomSkill+","+randomSat+","+randomSalary+");";
-                            document.write('<img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" onclick="javascript:hireEmployee('+randomNumber+','+randomSkill+','+randomSat+','+randomSalary+');">');
-                            document.write('<div class="hireinfo">');
-                            document.write('<a data-icon="user">'+randomSkill+'</a>');
-                            document.write('<a data-icon="home">'+randomSat+'</a>');
-                            document.write('<a data-icon="left">'+randomSalary+'</a>');
-                            document.write('</div>');
-                        </script>
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <!-- /////////// END /////////// -->
-        <!--//////////// HIRE EMPLOYEES ////////////-->
+  <body class="app">
 
 
 
 
+    <!--//////////// MAIN VIEW ////////////-->
+    <!--//////////// Employees, Investors, Main Menu with bottom bar ////////////-->
+    <section id="main-view" data-transition="slide">
+      <header id="head_items">
+        <div data-icon="home" class="statusbar_item">
+          <input type="text" readonly value="99" id="stat_product" class="stat_item_inp">
+        </div>
+        <div data-icon="right" class="statusbar_item">
+          <input type="text" readonly value="99" id="stat_talent" class="stat_item_inp">
+        </div>
+        <div data-icon="user" class="statusbar_item">
+          <input type="text" readonly value="99" id="stat_patents" class="stat_item_inp">
+        </div>
+        <div data-icon="upload" class="statusbar_item">
+          <input type="text" readonly value="99" id="stat_sat" class="stat_item_inp">
+        </div>
+        <div data-icon="up" class="statusbar_item">
+          <input type="text" readonly value="99" id="stat_invint" class="stat_item_inp">
+        </div>
+        <div data-icon="left" class="statusbar_item">
+          <input type="text" readonly value="93559" id="stat_product" class="stat_item_inp">
+        </div>
+      </header>
 
 
-        <!--
-            <aside id="features">
-                <header data-title="Options"></header>
-                <article class="list">
-                    <ul>
-                        <li class="current">
-                            <a href="#main-article" data-router="article">
-                                <strong>Main Article</strong>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#second-article" data-router="article">
-                                <strong>Second Article</strong>
-                            </a>
-                        </li>
-                    </ul>
-                </article>
-            </aside>
-        -->
-
-
-        <script>
-            Lungo.init({
-                name: 'prueba'
-            });
+      <!-- ------------- Grid of Employees ------------- -->
+      <article id="employees" class="employee_grid">
+        <script type="text/javascript">
+          for(var x=0;x<9;x++){
+            if(x%3==0 || x==0){
+              document.write("<div class='three rows'>");
+            }
+            document.write("<div class='three columns'>");
+            document.write("<a href='#employee_hire' data-router='section' id='emp"+x+"'>");
+            document.write("<img src='' id='empPic"+x+"'>");
+            document.write("</a>");
+            document.write("</div>");
+            if(x!=0 && x%3==0)
+              document.write("</div>");
+          }
         </script>
-    </body>
+        <div class="one column"></div>
+      </article>
+      <!--------------- END --------------->        
+      <!--------------- Grid of Employees --------------->
+
+      <!--------------- Grid of Investors --------------->
+      <article id="investors" class="employee_grid">
+
+        <div class="three columns">
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+        </div>
+
+
+        <div class="three columns">
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+        </div>
+
+        <div class="three columns">
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+          <div class="three rows">
+            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
+          </div>
+        </div>
+
+        <div class="one column"></div>          
+
+      </article>
+      <!--------------- END --------------->        
+      <!--------------- Grid of Investors --------------->
+
+      <!--------------- Menu with bottom bar --------------->        
+      <article id="menu-ingame" class="list">      
+        <form class="margined">
+          <img src="assets/gamelogo.svg" class="gamelogo">  
+          <div class="menu-elements">
+            <!--        
+            <a href="#employees" data-router="article" class="button">Resume</a>           
+            -->
+            <button class="button">Sound Off</button><!--class attribute button does not have any effects in style-->
+            <button class="new_game">New Game</button><!--class attribute button does not have any effects in style-->
+          </div>
+        </form>
+      </article>
+
+      <!--------------- END --------------->                
+      <!--------------- Menu with bottom bar --------------->      
+
+      <footer>
+        <nav>
+          <a href="#employees" data-router="article" class="current" data-icon="user"></a>
+          <a href="#investors" data-router="article" data-icon="inbox"></a>
+          <a href="#menu-ingame" data-router="article" data-icon="settings"></a>
+        </nav>
+      </footer>
+
+
+    </section>
+    <!-- /////////// END /////////// -->
+    <!--//////////// MAIN VIEW ////////////-->
+
+
+
+    <!--//////////// EMPLOYEE PROFILE ////////////-->    
+    <script type="text/javascript">
+      for(var i=0;i<employeeInformation.length;i++){
+        document.write('<section id="employee_profile'+i+'" data-transition="slide">');
+        document.write("<header data-title='"+employeeInformation[i][1]+"'>");
+        document.write('<nav class="left box">');
+        document.write('<a href="#back" data-router="section" data-icon="left"></a>');
+        document.write('</nav>');
+        document.write('<nav class="right box">');
+        document.write('<a href="#back" data-router="section" data-icon="close" data-label="Fire" class="fireEmp"></a>');
+        document.write("<input type='hidden' id='fireEmpId' value='"+i+"'>");
+        document.write('</nav>');
+        document.write("</header>");
+                
+        document.write('<article class="scroll">');
+        document.write('<form class="margined">');
+
+        document.write("<img src='/CoffeeInc/assets/emp_"+employeeInformation[i][0]+".svg' id='emp_profile_pic' >");        
+
+        document.write('<label id="empProfileSkill">Skill:  '+employeeInformation[i][2]+'</label>');
+        document.write('<div id="progress-normal" data-progress="'+employeeInformation[i][2]+'%"></div>');
+        document.write('<label id="empProfileSat">Satisfaction:   '+employeeInformation[i][4]+'</label>');
+        document.write('<div id="progress-normal" data-progress="'+employeeInformation[i][4]+'%"></div>');
+        document.write('<label id="empProfileSalary">Salary:   '+employeeInformation[i][5]+'</label>');
+        document.write('<input type="range" data-progress="10%" />');
+        document.write('</form>');
+
+        document.write('</article>');
+        document.write('</section>');
+      }
+    </script>
+    <!-- /////////// END /////////// -->
+    <!--//////////// EMPLOYEE PROFILE ////////////-->
+
+
+    <!--//////////// HIRE EMPLOYEES ////////////-->    
+
+    <section id="employee_hire" data-transition="slide">
+      <header data-title="Hire New Employees">
+        <nav class="left box">
+          <a href="#back" data-router="section" data-icon="left"></a>
+        </nav>
+      </header>
+
+
+      <article class="scroll">
+        <div class="five rows">
+          <div class="five columns">
+            <a href="#back" data-router="section" id="randomEmp1">
+              <script type="text/javascript">
+                var randomNumber=Math.floor(Math.random()*4)+1;
+                var randomSkill=Math.floor(Math.random()*100)+1;
+                var randomSat=Math.floor(Math.random()*100)+1;
+                var randomSalary=Math.floor(Math.random()*1500)+501;
+                document.write('<input type="hidden" id="newEmpPicId" value="'+randomNumber+'"><img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" id="hirePic1">');
+                document.write('<div class="hireinfo">');
+                document.write('<a data-icon="user"><input type="hidden" id="newEmpSkill" value="'+randomSkill+'">'+randomSkill+'</a>');
+                document.write('<a data-icon="home"><input type="hidden" id="newEmpSat" value="'+randomSat+'">'+randomSat+'</a>');
+                document.write('<a data-icon="left"><input type="hidden" id="newEmpSalary" value="'+randomSalary+'">'+randomSalary+'</a>');
+                document.write('</div>');
+              </script>
+            </a>
+          </div>        
+          <div class="five columns">
+            <a href="#back" data-router="section" id="randomEmp2">
+              <script type="text/javascript">
+                if(randomNumber==4)
+                  randomNumber=1;
+                else
+                  randomNumber++;
+                var randomSkill=Math.floor(Math.random()*100)+1;
+                var randomSat=Math.floor(Math.random()*100)+1;
+                var randomSalary=Math.floor(Math.random()*1500)+501;
+                document.write('<input type="hidden" id="newEmpPicId" value="'+randomNumber+'"><img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" id="hirePic2">');
+                document.write('<div class="hireinfo">');
+                document.write('<a data-icon="user"><input type="hidden" id="newEmpSkill" value="'+randomSkill+'">'+randomSkill+'</a>');
+                document.write('<a data-icon="home"><input type="hidden" id="newEmpSat" value="'+randomSat+'">'+randomSat+'</a>');
+                document.write('<a data-icon="left"><input type="hidden" id="newEmpSalary" value="'+randomSalary+'">'+randomSalary+'</a>');
+                document.write('</div>');
+              </script>
+            </a>
+          </div>
+          <div class="five columns">
+            <a href="#back" data-router="section" id="randomEmp3">
+              <script type="text/javascript">
+                if(randomNumber==4)
+                  randomNumber=1;
+                else
+                  randomNumber++;
+                var randomSkill=Math.floor(Math.random()*100)+1;
+                var  randomSat=Math.floor(Math.random()*100)+1;
+                var randomSalary=Math.floor(Math.random()*1500)+501;
+                document.write('<input type="hidden" id="newEmpPicId" value="'+randomNumber+'"><img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" id="hirePic3">');
+                document.write('<div class="hireinfo">');
+                document.write('<a data-icon="user"><input type="hidden" id="newEmpSkill" value="'+randomSkill+'">'+randomSkill+'</a>');
+                document.write('<a data-icon="home"><input type="hidden" id="newEmpSat" value="'+randomSat+'">'+randomSat+'</a>');
+                document.write('<a data-icon="left"><input type="hidden" id="newEmpSalary" value="'+randomSalary+'">'+randomSalary+'</a>');
+                document.write('</div>');
+              </script>
+            </a>
+          </div>
+          <div class="five columns">
+            <a href="#back" data-router="section" id="randomEmp4">
+              <script type="text/javascript">
+                if(randomNumber==4)
+                  randomNumber=1;
+                else
+                  randomNumber++;
+                var randomSkill=Math.floor(Math.random()*100)+1;
+                var randomSat=Math.floor(Math.random()*100)+1;
+                var randomSalary=Math.floor(Math.random()*1500)+501;
+                document.write('<input type="hidden" id="newEmpPicId" value="'+randomNumber+'"><img src="/CoffeeInc/assets/emp_'+randomNumber+'.svg" class="employee_hire_pic" id="hirePic4">');
+                document.write('<div class="hireinfo">');
+                document.write('<a data-icon="user"><input type="hidden" id="newEmpSkill" value="'+randomSkill+'">'+randomSkill+'</a>');
+                document.write('<a data-icon="home"><input type="hidden" id="newEmpSat" value="'+randomSat+'">'+randomSat+'</a>');
+                document.write('<a data-icon="left"><input type="hidden" id="newEmpSalary" value="'+randomSalary+'">'+randomSalary+'</a>');
+                document.write('</div>');
+              </script>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /////////// END /////////// -->
+    <!--//////////// HIRE EMPLOYEES ////////////-->
+
+
+
+
+
+
+    <!--
+        <aside id="features">
+            <header data-title="Options"></header>
+            <article class="list">
+                <ul>
+                    <li class="current">
+                        <a href="#main-article" data-router="article">
+                            <strong>Main Article</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#second-article" data-router="article">
+                            <strong>Second Article</strong>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </aside>
+    -->
+
+
+    <script>
+      Lungo.init({
+        name: 'prueba'
+      });
+    </script>
+  </body>
 </html>
+<!--<div class="three rows">
+                    <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(1);" id="emp1"><script type="text/javascript">
+                       
+                        if(employeeInformation[1].picId>=0){
+                            if(employeeInformation[1].picId!=0)
+                                document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[1].picId + ".svg' id='empPic1'>");
+                            else{
+                                document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
+                                document.getElementById("emp1").href="#employee_hire";
+                            }
+                        }
+                        </script></a>
+                </div>
+                <div class="three rows">
+                    <a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(2);" id="emp2"><script type="text/javascript">
+<!--
+if(employeeInformation[2].picId>=0){
+    if(employeeInformation[2].picId!=0)
+        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[2].picId + ".svg' id='empPic00'>");
+    else{
+        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
+        document.getElementById("emp2").href="#employee_hire";
+    }
+}
+</script></a>
+</div>
+</div>
+
+
+<div class="three columns">
+<div class="three rows">
+<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(3);" id="emp3"><script type="text/javascript">
+<!--
+if(employeeInformation[3].picId>=0){
+    if(employeeInformation[3].picId!=0)
+        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[3].picId + ".svg' id='empPic3'>");
+    else{
+        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
+        document.getElementById("emp3").href="#employee_hire";
+    }
+}
+</script></a>
+</div>
+<div class="three rows">
+<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(4);" id="emp4"><script type="text/javascript">
+<!--
+if(employeeInformation[4].picId>=0){
+    if(employeeInformation[4].picId!=0)
+        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[4].picId + ".svg' id='empPic4'>");
+    else{
+        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
+        document.getElementById("emp4").href="#employee_hire";
+    }
+}
+</script></a>
+</div>
+<div class="three rows">
+<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(5);" id="emp5"><script type="text/javascript">
+<!--
+if(employeeInformation[5].picId>=0){
+    if(employeeInformation[5].picId!=0)
+        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[5].picId + ".svg' id='empPic5'>");
+    else{
+        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
+        document.getElementById("emp5").href="#employee_hire";
+    }
+}
+</script></a>
+</div>
+</div>
+
+<div class="three columns">
+<div class="three rows">
+<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(6);" id="emp6"><script type="text/javascript">
+<!--
+if(employeeInformation[6].picId>=0){
+    if(employeeInformation[6].picId!=0)
+        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[6].picId + ".svg' id='empPic6'>");
+    else{
+        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
+        document.getElementById("emp6").href="#employee_hire";
+    }
+}
+</script></a>
+</div>
+<div class="three rows">
+<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(7);" id="emp7">
+<script type="text/javascript">
+<!--
+if(employeeInformation[7].picId>=0){
+    if(employeeInformation[7].picId!=0)
+        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[7].picId + ".svg' id='empPic7'>");
+    else{
+        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
+        document.getElementById("emp7").href="#employee_hire";
+    }
+}
+
+</script>
+</a>
+</div>
+<div class="three rows">
+<a href="#employee_profile" data-router="section" onclick="javascript: changeProfileInfo(8);" id="emp8">
+<script type="text/javascript">
+<!--
+if(employeeInformation[8].picId>=0){
+    if(employeeInformation[8].picId!=0)
+        document.write("<img src='/CoffeeInc/assets/emp_d_" + employeeInformation[8].picId + ".svg' id='empPic8'>");
+    else{
+        document.write("<img src='/CoffeeInc/assets/add.svg' class='add_button' >");
+        document.getElementById("emp8").href="#employee_hire";
+    }
+}
+
+</script>
+</a>
+</div>
+</div>-->
