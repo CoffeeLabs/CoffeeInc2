@@ -79,6 +79,25 @@
           employeeInformation.push([0,0,0,0,0,0,0]);
           $.totalStorage("emp",employeeInformation);
         }
+        if(!$.totalStorage.getItem("stat_product"))
+          $.totalStorage.setItem("stat_product", 0);
+        statusbarProduct=$.totalStorage.getItem("stat_product");
+        if(!$.totalStorage.getItem("stat_talent"))
+          $.totalStorage.setItem("stat_talent", 0);
+        statusbarTalent=$.totalStorage.getItem("stat_talent");
+        if(!$.totalStorage.getItem("stat_patents"))
+          $.totalStorage.setItem("stat_patents", 0);
+        statusbarPatents=$.totalStorage.getItem("stat_patents");
+        if(!$.totalStorage.getItem("stat_sat"))
+          $.totalStorage.setItem("stat_sat", 0);
+        statusbarSatisfaction=$.totalStorage.getItem("stat_sat");
+        if(!$.totalStorage.getItem("stat_invint"))
+          $.totalStorage.setItem("stat_invint", 0);
+        statusbarInvInt=$.totalStorage.getItem("stat_invint");
+        if(!$.totalStorage.getItem("stat_budget"))
+          $.totalStorage.setItem("stat_budget", 0);
+        statusbarBudget=$.totalStorage.getItem("stat_budget");
+        
         paintEmpField();
         function hireEmployee(empPic,empName,empSkill,empSat,empSalary){
           var key="emp";
@@ -195,7 +214,7 @@
           <input type="text" readonly value="99" id="stat_invint" class="stat_item_inp">
         </div>
         <div data-icon="left" class="statusbar_item">
-          <input type="text" readonly value="93559" id="stat_product" class="stat_item_inp">
+          <input type="text" readonly value="99999" id="stat_budget" class="stat_item_inp">
         </div>
       </header>
 
