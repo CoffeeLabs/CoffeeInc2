@@ -94,8 +94,10 @@
         if(!$.totalStorage.getItem("stat_invint"))
           $.totalStorage.setItem("stat_invint", 0);
         statusbarInvInt=$.totalStorage.getItem("stat_invint");
+        if(!$.totalStorage.getItem("stat_old_budget"))
+          $.totalStorage.setItem("stat_old_budget", 0);
         if(!$.totalStorage.getItem("stat_budget"))
-          $.totalStorage.setItem("stat_budget", 0);
+          $.totalStorage.setItem("stat_budget", 10000);
         statusbarBudget=$.totalStorage.getItem("stat_budget");
         
         paintEmpField();
@@ -152,7 +154,14 @@
           employeeInformation.push([0,0,0,0,0,0,0]);
           var val = employeeInformation;
           $.totalStorage(key, val);
-          alert('New Game with value for ' + key+": "+val+";");
+          $.totalStorage.setItem("stat_product", 0);
+          $.totalStorage.setItem("stat_talent", 0);
+          $.totalStorage.setItem("stat_patents", 0);
+          $.totalStorage.setItem("stat_sat", 0);
+          $.totalStorage.setItem("stat_invint", 0);
+          $.totalStorage.setItem("stat_old_budget", 0);
+          $.totalStorage.setItem("stat_budget", 10000);
+          alert('New Game');
           window.setTimeout("location.reload(true);",0);
           //paintEmpField();
         });
@@ -308,6 +317,7 @@
           <a href="#employees" data-router="article" class="current" data-icon="user"></a>
           <a href="#investors" data-router="article" data-icon="inbox"></a>
           <a href="#menu-ingame" data-router="article" data-icon="settings"></a>
+          <a href="#next_round" data-icon="right" onclick="nextRound();"></a>
         </nav>
       </footer>
 
@@ -335,13 +345,13 @@
         document.write('<article class="scroll">');
         document.write('<form class="margined">');
 
-        document.write("<img src='/CoffeeInc/assets/emp_"+employeeInformation[i][0]+".svg' id='emp_profile_pic' >");        
+        document.write("<img src='/CoffeeInc2/assets/emp_"+employeeInformation[i][0]+".svg' id='emp_profile_pic' >");        
 
         document.write('<label id="empProfileSkill">Skill:  '+employeeInformation[i][2]+'</label>');
         document.write('<div id="progress-normal" data-progress="'+employeeInformation[i][2]+'%"></div>');
         document.write('<label id="empProfileSat">Satisfaction:   '+employeeInformation[i][4]+'</label>');
         document.write('<div id="progress-normal" data-progress="'+employeeInformation[i][4]+'%"></div>');
-        document.write('<label id="empProfileSalary">Salary:   '+employeeInformation[i][5]+'</label>');
+        document.write('<label id="empProfileSalary">Salary:   '+employeeInformation[i][6]+'</label>');
         document.write('<input type="range" data-progress="10%" />');
         document.write("</form>");
 
@@ -368,7 +378,7 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp1">
               <script type="text/javascript">
-                document.write('<input type="hidden" id="newEmpPicId1" value="'+picId1+'"><img src="/CoffeeInc/assets/emp_'+picId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
+                document.write('<input type="hidden" id="newEmpPicId1" value="'+picId1+'"><img src="/CoffeeInc2/assets/emp_'+picId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
                 document.write('<div class="hireinfo">');
                 document.write('<a data-icon="user"><input type="text" id="newEmpSkill1" value="'+randomSkill1+'" class="stat_item_inp"></a>');
                 document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomSat1+'" class="stat_item_inp"></a></br>');
@@ -380,7 +390,7 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp2">
               <script type="text/javascript">
-                document.write('<input type="hidden" id="newEmpPicId2" value="'+picId2+'"><img src="/CoffeeInc/assets/emp_'+picId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
+                document.write('<input type="hidden" id="newEmpPicId2" value="'+picId2+'"><img src="/CoffeeInc2/assets/emp_'+picId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
                 document.write('<div class="hireinfo">');
                 document.write('<a data-icon="user"><input type="text" id="newEmpSkill2" value="'+randomSkill2+'" class="stat_item_inp"></a>');
                 document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomSat2+'" class="stat_item_inp"></a></br>');//hack
@@ -392,7 +402,7 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp3">
               <script type="text/javascript">
-                document.write('<input type="hidden" id="newEmpPicId3" value="'+picId3+'"><img src="/CoffeeInc/assets/emp_'+picId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
+                document.write('<input type="hidden" id="newEmpPicId3" value="'+picId3+'"><img src="/CoffeeInc2/assets/emp_'+picId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
                 document.write('<div class="hireinfo">');
                 document.write('<a data-icon="user"><input type="text" id="newEmpSkill3" value="'+randomSkill3+'" class="stat_item_inp"></a>');
                 document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomSat3+'" class="stat_item_inp"></a></br>');
@@ -404,7 +414,7 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp4">
               <script type="text/javascript">
-                document.write('<input type="hidden" id="newEmpPicId4" value="'+picId4+'"><img src="/CoffeeInc/assets/emp_'+picId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
+                document.write('<input type="hidden" id="newEmpPicId4" value="'+picId4+'"><img src="/CoffeeInc2/assets/emp_'+picId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
                 document.write('<div class="hireinfo">');
                 document.write('<a data-icon="user"><input type="text" id="newEmpSkill4" value="'+randomSkill4+'" class="stat_item_inp"></a>');
                 document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomSat4+'" class="stat_item_inp"></a></br>');
