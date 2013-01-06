@@ -105,11 +105,12 @@
           var key="emp";
           employeeInformation.pop();
           employeeInformation.push([empPic,empName,empSkill,5,empSat,empSalary,empSalary]);
+          alert('Saved value for ' + key+": "+employeeInformation);//val);
           employeeInformation.push([0,0,0,0,0,0,0]);
           var val = employeeInformation;
           $.totalStorage(key, val);
-          alert('Saved value for ' + key+": "+val);
           paintEmpField();
+          generateNewEmp();
         }
         $('.employee_hire_pic1').click(function(e){
           e.preventDefault();       
@@ -162,8 +163,9 @@
           $.totalStorage.setItem("stat_old_budget", 0);
           $.totalStorage.setItem("stat_budget", 10000);
           alert('New Game');
-          window.setTimeout("location.reload(true);",0);
-          //paintEmpField();
+          paintEmpField();
+          updateHeader();
+          //window.setTimeout("location.reload(true);",0);
         });
         
         $('.add').click(function(e){
@@ -208,22 +210,22 @@
     <section id="main-view" data-transition="slide">
       <header id="head_items" class="brownbg">
         <div data-icon="home" class="statusbar_item">
-          <input type="text" readonly value="99" id="stat_product" class="stat_item_inp">
+          <input type="text" readonly value="0" id="stat_product" class="stat_item_inp">
         </div>
         <div data-icon="right" class="statusbar_item">
-          <input type="text" readonly value="99" id="stat_talent" class="stat_item_inp">
+          <input type="text" readonly value="0" id="stat_talent" class="stat_item_inp">
         </div>
         <div data-icon="user" class="statusbar_item">
-          <input type="text" readonly value="99" id="stat_patents" class="stat_item_inp">
+          <input type="text" readonly value="0" id="stat_patents" class="stat_item_inp">
         </div>
         <div data-icon="upload" class="statusbar_item">
-          <input type="text" readonly value="99" id="stat_sat" class="stat_item_inp">
+          <input type="text" readonly value="0" id="stat_sat" class="stat_item_inp">
         </div>
         <div data-icon="up" class="statusbar_item">
-          <input type="text" readonly value="99" id="stat_invint" class="stat_item_inp">
+          <input type="text" readonly value="0" id="stat_invint" class="stat_item_inp">
         </div>
         <div data-icon="left" class="statusbar_item">
-          <input type="text" readonly value="99999" id="stat_budget" class="stat_item_inp">
+          <input type="text" readonly value="0" id="stat_budget" class="stat_item_inp">
         </div>
       </header>
 
@@ -251,7 +253,21 @@
 
       <!--------------- Grid of Investors --------------->
       <article id="investors" class="employee_grid">
-
+        <script type="text/javascript">
+          for(var x=0;x<9;x++){
+            if(x%3==0 || x==0){
+              document.write("<div class='three rows'>");
+            }
+            document.write("<div class='three columns'>");
+            document.write("<a href='#investors' data-router='section' id='inv"+x+"'>");
+            document.write("<img src='' id='invPic"+x+"' onclick='generateNewInv();'>");
+            document.write("</a>");
+            document.write("</div>");
+            if(x!=0 && x%3==0)
+              document.write("</div>");
+          }
+        </script>
+        <!--
         <div class="three columns">
           <div class="three rows">
             <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
@@ -287,7 +303,7 @@
           <div class="three rows">
             <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
           </div>
-        </div>
+        </div>-->
 
         <div class="one column"></div>          
 
