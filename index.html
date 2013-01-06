@@ -80,38 +80,30 @@
           $.totalStorage("emp",employeeInformation);
         }
         if(!$.totalStorage.getItem("stat_product"))
-          $.totalStorage.setItem("stat_product", 0);
+          $.totalStorage.setItem("stat_product", 1);
         statusbarProduct=$.totalStorage.getItem("stat_product");
         if(!$.totalStorage.getItem("stat_talent"))
-          $.totalStorage.setItem("stat_talent", 0);
+          $.totalStorage.setItem("stat_talent", 1);
         statusbarTalent=$.totalStorage.getItem("stat_talent");
         if(!$.totalStorage.getItem("stat_patents"))
-          $.totalStorage.setItem("stat_patents", 0);
+          $.totalStorage.setItem("stat_patents", 1);
         statusbarPatents=$.totalStorage.getItem("stat_patents");
         if(!$.totalStorage.getItem("stat_sat"))
-          $.totalStorage.setItem("stat_sat", 0);
+          $.totalStorage.setItem("stat_sat", 1);
         statusbarSatisfaction=$.totalStorage.getItem("stat_sat");
         if(!$.totalStorage.getItem("stat_invint"))
-          $.totalStorage.setItem("stat_invint", 0);
+          $.totalStorage.setItem("stat_invint", 1);
         statusbarInvInt=$.totalStorage.getItem("stat_invint");
         if(!$.totalStorage.getItem("stat_old_budget"))
           $.totalStorage.setItem("stat_old_budget", 0);
         if(!$.totalStorage.getItem("stat_budget"))
           $.totalStorage.setItem("stat_budget", 10000);
+        if(!$.totalStorage.getItem("avSalary"))
+          $.totalStorage.setItem("avSalary",0);
         statusbarBudget=$.totalStorage.getItem("stat_budget");
         
         paintEmpField();
-        function hireEmployee(empPic,empName,empSkill,empSat,empSalary){
-          var key="emp";
-          employeeInformation.pop();
-          employeeInformation.push([empPic,empName,empSkill,5,empSat,empSalary,empSalary]);
-          alert('Saved value for ' + key+": "+employeeInformation);//val);
-          employeeInformation.push([0,0,0,0,0,0,0]);
-          var val = employeeInformation;
-          $.totalStorage(key, val);
-          paintEmpField();
-          generateNewEmp();
-        }
+        
         $('.employee_hire_pic1').click(function(e){
           e.preventDefault();       
           var empPic=$("#newEmpPicId1").val();
@@ -150,16 +142,14 @@
       });
       $('.new_game').click(function(e){
         e.preventDefault();
-        var key = "emp";
-        employeeInformation=[];
+        employeeInformation=new Array();
         employeeInformation.push([0,0,0,0,0,0,0]);
-        var val = employeeInformation;
-        $.totalStorage(key, val);
-        $.totalStorage.setItem("stat_product", 0);
-        $.totalStorage.setItem("stat_talent", 0);
-        $.totalStorage.setItem("stat_patents", 0);
-        $.totalStorage.setItem("stat_sat", 0);
-        $.totalStorage.setItem("stat_invint", 0);
+        $.totalStorage("emp", employeeInformation);
+        $.totalStorage.setItem("stat_product", 1);
+        $.totalStorage.setItem("stat_talent", 1);
+        $.totalStorage.setItem("stat_patents", 1);
+        $.totalStorage.setItem("stat_sat", 1);
+        $.totalStorage.setItem("stat_invint", 1);
         $.totalStorage.setItem("stat_old_budget", 0);
         $.totalStorage.setItem("stat_budget", 10000);
         alert('New Game');
@@ -346,7 +336,7 @@
 
     <!--//////////// EMPLOYEE PROFILE ////////////-->    
     <section id="employee_profile" data-transition="slide">
-      <header data-title="Employee Profile">
+      <header id="empProfileName" data-title="Employee Profile">
         <nav class="left box">
           <a href="#back" data-router="section" data-icon="left"></a>
         </nav>
@@ -387,7 +377,7 @@
             <tr>
               <td><a id="salaryDec" href="javascript:decSalary();"><div class="dec">-</div></a></td>
               <script type="text/javascript">
-                for(var i =0; i<85; i++){
+                for(var i =0; i<80; i++){
                   document.write("<td id='progressBarSalary"+i+"' style='background-color:lightgrey;width:auto'>&nbsp;</td>");
                 }
               </script>
