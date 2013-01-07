@@ -80,19 +80,19 @@
           $.totalStorage("emp",employeeInformation);
         }
         if(!$.totalStorage.getItem("stat_product"))
-          $.totalStorage.setItem("stat_product", 1);
+          $.totalStorage.setItem("stat_product", 0);
         statusbarProduct=$.totalStorage.getItem("stat_product");
         if(!$.totalStorage.getItem("stat_talent"))
-          $.totalStorage.setItem("stat_talent", 1);
+          $.totalStorage.setItem("stat_talent", 0);
         statusbarTalent=$.totalStorage.getItem("stat_talent");
         if(!$.totalStorage.getItem("stat_patents"))
-          $.totalStorage.setItem("stat_patents", 1);
+          $.totalStorage.setItem("stat_patents", 0);
         statusbarPatents=$.totalStorage.getItem("stat_patents");
         if(!$.totalStorage.getItem("stat_sat"))
-          $.totalStorage.setItem("stat_sat", 1);
+          $.totalStorage.setItem("stat_sat", 0);
         statusbarSatisfaction=$.totalStorage.getItem("stat_sat");
         if(!$.totalStorage.getItem("stat_invint"))
-          $.totalStorage.setItem("stat_invint", 1);
+          $.totalStorage.setItem("stat_invint", 0);
         statusbarInvInt=$.totalStorage.getItem("stat_invint");
         if(!$.totalStorage.getItem("stat_old_budget"))
           $.totalStorage.setItem("stat_old_budget", 0);
@@ -103,6 +103,7 @@
         statusbarBudget=$.totalStorage.getItem("stat_budget");
         
         paintEmpField();
+        updateHeader();
         
         $('.employee_hire_pic1').click(function(e){
           e.preventDefault();       
@@ -145,11 +146,11 @@
         employeeInformation=new Array();
         employeeInformation.push([0,0,0,0,0,0,0]);
         $.totalStorage("emp", employeeInformation);
-        $.totalStorage.setItem("stat_product", 1);
-        $.totalStorage.setItem("stat_talent", 1);
-        $.totalStorage.setItem("stat_patents", 1);
-        $.totalStorage.setItem("stat_sat", 1);
-        $.totalStorage.setItem("stat_invint", 1);
+        $.totalStorage.setItem("stat_product", 0);
+        $.totalStorage.setItem("stat_talent", 0);
+        $.totalStorage.setItem("stat_patents", 0);
+        $.totalStorage.setItem("stat_sat", 0);
+        $.totalStorage.setItem("stat_invint", 0);
         $.totalStorage.setItem("stat_old_budget", 0);
         $.totalStorage.setItem("avSalary",0);
         $.totalStorage.setItem("stat_budget", 10000);
@@ -166,8 +167,10 @@
         
       $('.fireEmp').click(function(e){
         e.preventDefault();
+        alert($.totalStorage.getItem("avSalary"));
+        $.totalStorage.setItem("avSalary",$.totalStorage.getItem("avSalary")-parseInt(employeeInformation[position][6]));
+        alert($.totalStorage.getItem("avSalary"));
         employeeInformation.splice(position,1);
-        alert(employeeInformation);
         $.totalStorage.setItem("emp", employeeInformation);
         alert('Employee got fired! new value for key emp: '+employeeInformation+";");
         window.setTimeout("location.reload(true);",0);
