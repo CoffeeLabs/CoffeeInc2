@@ -1,0 +1,132 @@
+product backlog
+
+MVP v0.1
+static team
+salaries fixed, propotional to skill
+employee satisfaction
+no assets
+no actions by investors
+
+
+set up github
+learn framework
+basic layouts/wireframes
+MVP simplified data model
+full data model
+
+
+
+basic data model
+  costs: office, salaries,
+  player actions: get investors, hire/fire employees, change salaries, buy/sell assets,  
+  employee actions: improve product score based on skill and satisfaction
+  investor actions: randomly reject player decisions
+
+objects:
+  employees:
+    * skill (0...99)
+    * satisfaction (0...99)
+    * minimum salary (0...1000)
+    * productivity modifier (0...10) -> how fast the skill increases
+    
+    * productivity/round (how much is added to the product score every round for this employee)
+    * 
+    
+    * picture ID (which of the picture sets is used)
+    * initial values for every characteristic ((randomly) generated when hired)
+    * 
+    
+  investors:
+    * investment offer (0...10,000 $)
+    * investor interest (0...99) (both personal and collective; personal interest makes the investor be nicer to you)
+    * equity they want for the investment (0...100 %)
+    * you must own the biggest share of the company
+    * more, smaller invesotrs -> decisions are more likely to be rejected
+    * less, bigger investors -> retaining ownership of the company is harder
+    * randomly reject decisions (every 10s, probability 1...50)
+
+  assets:    
+    static (payed once):
+      * couch
+      * whirlpool
+      * riesen flatscreen
+      
+    dynamic (payed every minute):
+      * office rent + monthly costs
+      * coffee
+      
+  
+scores:  
+  product:
+    * employees increase score every 10s
+    * skill (2/3)
+    * satisfaction (1/3)
+    * every increase from every employee is multiplied with 0.8...1.2
+    * score range: 0...1000
+    * 
+  
+  talent:
+    * average skill of all employees
+    * importance of every employee is random: skill is multiplied with 0.8...1.2
+    * score range: 0...1000
+  
+  patents:
+    * every employee randomly generates patents
+    * random with 1...50 probability fuction every 10s
+    * score range: 0...100 (100 patents)
+    
+      
+  employee satisfaction:
+    * salary +/- factor (1/2)
+    * static and dynamic assets (1/2)
+    * score range: -100...100 
+        
+  investor interest: 
+    * speed of product score rising (1/3)
+    * speed of talent score rising (1/3)
+    * speed of patent score rising (1/3)
+    * all of the above*(5/6)+ (expenses of last minute/average expenses per minute)*(1/6)
+    * score range: 0...100
+    
+  scores are evaluated every 10s
+  average scores of the last 2 minutes are valued 3/4
+  average overall score since the start of the game is valued 1/4
+  calculated score is multiplied with a random number between 0.8 and 1.2
+  
+  costs:
+    * All costs are calculated and subtracted from your account once every minute
+    * If you don't have enough money to pay the costs, your account will be overdrawn
+    * If your account is overdrawn for more than 2 minutes, the game is over
+    * If you overdraw your account by more than 100,000 $, the game is over
+  
+interactions:
+  
+  hire:
+    * the number of applying people is always 3
+    * the skills of every employee are higher/lower depending on the satisfaction of your current employees
+    * skill= (average skill of current employees*(1/2)+5*(satisfaction+100)*(1/2)) * random factor (0.5....1.5)
+    * the mimimum salary depends on the current average salary, the skill and the average skill of current employees
+    * min. salary= (average salary*(1/2)+(skill/average skill)*(1/2)) * random factor (0.5....1.5)
+    * every time a new employee is hired, the satisfaction of all other employees increases by 5*random(0.2...1.8)
+    
+  fire:
+      * When an employee is fired, the satisfaction of all other employees decreases by 5*random(0.2...1.8)
+    
+  change salaries:
+    * salaries can go from 0...1,000$/minute
+    * changing the salary of an employee directly impacts his satisfaction
+    * raise salary: 
+      satisfaction salary factor= current satisfaction + (1/10)(new salary/current salary)*random(0.8...1.2)
+    * lower salary: 
+      satisfaction salary factor= current satisfaction - (1/100)(new salary/current salary)*random(0.8...1.2)
+  
+  get investors:
+    * the number of applying investors is always 3
+    * the offered money/share is proportional to the investor interest
+    * money/share= money/share in last investment round*(current investor interest/investor interst las round)
+        
+  buy assets:
+    * decreases investor interest (increases expenses -> decreases interest)
+    
+    
+

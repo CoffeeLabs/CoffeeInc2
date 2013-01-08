@@ -381,7 +381,7 @@
           <table border="0" cellspacing="0" cellpadding="0" width="100%">
             <tr>
               <td><a id="salaryDec" href="javascript:decSalary();"><div class="dec">-</div></a></td>
-              <td><div id="empProgressProfileSalary" data-progress="10%"></div></td>
+              <td><div id="empProgressProfileSat" data-progress="10%"></div></td>
               <td><a id="salaryInc" href="javascript:incSalary();"><div class="inc">+</div></a></td>
           </table>
           <!--<input type="range" id="empProgressProfileSalary" data-progress="10%" />-->
