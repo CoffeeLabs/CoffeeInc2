@@ -80,7 +80,7 @@
         if($.totalStorage.getItem("inv")){
           investorInformation=$.totalStorage.getItem("inv");
         }else{
-          investorInformation.push([0,0,0,0,0,0,0]);
+          investorInformation.push([0,0,0,0,0]);
           $.totalStorage("inv",investorInformation);
         }
         if(!$.totalStorage.getItem("stat_product"))
@@ -102,56 +102,96 @@
           $.totalStorage.setItem("stat_old_budget", 0);
         if(!$.totalStorage.getItem("stat_budget"))
           $.totalStorage.setItem("stat_budget", 10000);
+        statusbarBudget=$.totalStorage.getItem("stat_budget");
         if(!$.totalStorage.getItem("avSalary"))
           $.totalStorage.setItem("avSalary",0);
-        statusbarBudget=$.totalStorage.getItem("stat_budget");
+        if(!$.totalStorage.getItem("equity"))
+          $.totalStorage.setItem("equity",100);
         
         paintEmpField();
         paintInvField();
         
         $('.employee_hire_pic1').click(function(e){
           e.preventDefault();       
-          var tmpEmpPic=$("#newEmpPicId1").val();
-          var tmpEmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-          var tmpEmpSkill=$("#newEmpSkill1").val();
-          var tmpEmpSat=$("#newEmpSat1").val();
-          var tmpEmpSalary=$("#newEmpSalary1").val();
-          hireEmployee(tmpEmpPic,tmpEmpName,tmpEmpSkill,tmpEmpSat,tmpEmpSalary);
+          var tmpPicId=$("#newEmpPicId1").val();
+          var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+          var tmpSkill=$("#newEmpSkill1").val();
+          var tmpSat=$("#newEmpSat1").val();
+          var tmpSalary=$("#newEmpSalary1").val();
+          hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSat,tmpSalary);
         });
       $('.employee_hire_pic2').click(function(e){
         e.preventDefault();
-        var tmpEmpPic=$("#newEmpPicId2").val();
-        var tmpEmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-        var tmpEmpSkill=$("#newEmpSkill2").val();
-        var tmpEmpSat=$("#newEmpSat2").val();
-        var tmpEmpSalary=$("#newEmpSalary2").val();
-        hireEmployee(tmpEmpPic,tmpEmpName,tmpEmpSkill,tmpEmpSat,tmpEmpSalary);
+        var tmpPicId=$("#newEmpPicId2").val();
+        var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+        var tmpSkill=$("#newEmpSkill2").val();
+        var tmpSat=$("#newEmpSat2").val();
+        var tmpSalary=$("#newEmpSalary2").val();
+        hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSat,tmpSalary);
       });
       $('.employee_hire_pic3').click(function(e){
         e.preventDefault();
-        var tmpEmpPic=$("#newEmpPicId3").val();
-        var tmpEmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-        var tmpEmpSkill=$("#newEmpSkill3").val();
-        var tmpEmpSat=$("#newEmpSat3").val();
-        var tmpEmpSalary=$("#newEmpSalary3").val();
-        hireEmployee(tmpEmpPic,tmpEmpName,tmpEmpSkill,tmpEmpSat,tmpEmpSalary);
+        var tmpPicId=$("#newEmpPicId3").val();
+        var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+        var tmpSkill=$("#newEmpSkill3").val();
+        var tmpSat=$("#newEmpSat3").val();
+        var tmpSalary=$("#newEmpSalary3").val();
+        hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSat,tmpSalary);
       });
       $('.employee_hire_pic4').click(function(e){
         e.preventDefault();
-        var tmpEmpPic=$("#newEmpPicId4").val();
-        var tmpEmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-        var tmpEmpSkill=$("#newEmpSkill4").val();
-        var tmpEmpSat=$("#newEmpSat4").val();
-        var tmpEmpSalary=$("#newEmpSalary4").val();
-        hireEmployee(tmpEmpPic,tmpEmpName,tmpEmpSkill,tmpEmpSat,tmpEmpSalary);
+        var tmpPicId=$("#newEmpPicId4").val();
+        var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+        var tmpSkill=$("#newEmpSkill4").val();
+        var tmpSat=$("#newEmpSat4").val();
+        var tmpSalary=$("#newEmpSalary4").val();
+        hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSat,tmpSalary);
       });
+      
+      $('.investor_hire_pic1').click(function(e){
+          e.preventDefault();       
+          var tmpPicId=$("#newInvPicId1").val();
+          var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+          var tmpInt=$("#newInvInt1").val();
+          var tmpEquity=$("#newInvEquity1").val();
+          var tmpOffer=$("#newInvOffer1").val();
+          hireInvestor(tmpPicId,tmpName,tmpInt,tmpEquity,tmpOffer);
+        });
+      $('.investor_hire_pic2').click(function(e){
+        e.preventDefault();
+        var tmpPicId=$("#newInvPicId2").val();
+        var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+        var tmpInt=$("#newInvInt2").val();
+        var tmpEquity=$("#newInvEquity2").val();
+        var tmpOffer=$("#newInvOffer2").val();
+        hireInvestor(tmpPicId,tmpName,tmpInt,tmpEquity,tmpOffer);
+      });
+      $('.investor_hire_pic3').click(function(e){
+        e.preventDefault();
+        var tmpPicId=$("#newInvPicId3").val();
+        var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+        var tmpInt=$("#newInvInt3").val();
+        var tmpEquity=$("#newInvEquity3").val();
+        var tmpOffer=$("#newInvOffer3").val();
+        hireInvestor(tmpPicId,tmpName,tmpInt,tmpEquity,tmpOffer);
+      });
+      $('.investor_hire_pic4').click(function(e){
+        e.preventDefault();
+        var tmpPicId=$("#newInvPicId4").val();
+        var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
+        var tmpInt=$("#newInvInt4").val();
+        var tmpEquity=$("#newInvEquity4").val();
+        var tmpOffer=$("#newInvOffer4").val();
+        hireInvestor(tmpPicId,tmpName,tmpInt,tmpEquity,tmpOffer);
+      });
+      
       $('.new_game').click(function(e){
         e.preventDefault();
         employeeInformation=[];
         employeeInformation.push([0,0,0,0,0,0,0]);
         $.totalStorage("emp", employeeInformation);
         investorInformation=[];
-        investorInformation.push([0,0,0,0,0,0,0]);
+        investorInformation.push([0,0,0,0,0]);
         $.totalStorage("inv", investorInformation);
         $.totalStorage.setItem("stat_product", 0);
         $.totalStorage.setItem("stat_talent", 0);
@@ -161,6 +201,7 @@
         $.totalStorage.setItem("stat_old_budget", 0);
         $.totalStorage.setItem("avSalary",0);
         $.totalStorage.setItem("stat_budget", 10000);
+        $.totalStorage.setItem("equity",100);
         alert('New Game');
         //paintEmpField();
         //updateHeader();
@@ -377,7 +418,7 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp1">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId1" value="'+empHiringPicId1+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
+              document.write('<input type="hidden" id="newEmpPicId1" value="'+empHiringPicId1+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId1+'.svg" class="employee_hire_pic1" id="empHirePic1">');
               document.write('<div class="hireinfo">');
               document.write('<a data-icon="user"><input type="text" id="newEmpSkill1" value="'+randomEmpHiringSkill1+'" class="stat_item_inp"></a>');
               document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomEmpHiringSat1+'" class="stat_item_inp"></a></br>');
@@ -389,7 +430,7 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp2">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId2" value="'+empHiringPicId2+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
+              document.write('<input type="hidden" id="newEmpPicId2" value="'+empHiringPicId2+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId2+'.svg" class="employee_hire_pic2" id="empHirePic2">');
               document.write('<div class="hireinfo">');
               document.write('<a data-icon="user"><input type="text" id="newEmpSkill2" value="'+randomEmpHiringSkill2+'" class="stat_item_inp"></a>');
               document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomEmpHiringSat2+'" class="stat_item_inp"></a></br>');//hack
@@ -401,7 +442,7 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp3">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId3" value="'+empHiringPicId3+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
+              document.write('<input type="hidden" id="newEmpPicId3" value="'+empHiringPicId3+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId3+'.svg" class="employee_hire_pic3" id="empHirePic3">');
               document.write('<div class="hireinfo">');
               document.write('<a data-icon="user"><input type="text" id="newEmpSkill3" value="'+randomEmpHiringSkill3+'" class="stat_item_inp"></a>');
               document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomEmpHiringSat3+'" class="stat_item_inp"></a></br>');
@@ -413,7 +454,7 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp4">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId4" value="'+empHiringPicId4+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
+              document.write('<input type="hidden" id="newEmpPicId4" value="'+empHiringPicId4+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId4+'.svg" class="employee_hire_pic4" id="empHirePic4">');
               document.write('<div class="hireinfo">');
               document.write('<a data-icon="user"><input type="text" id="newEmpSkill4" value="'+randomEmpHiringSkill4+'" class="stat_item_inp"></a>');
               document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomEmpHiringSat4+'" class="stat_item_inp"></a></br>');
@@ -469,49 +510,49 @@
       <article class="scroll">
         <div class="five rows">
           <div class="five columns">
-            <a href="#back" data-router="section" id="randomEmp1">
+            <a href="#back" data-router="section" id="randomInv1">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId1" value="'+empHiringPicId1+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
+              document.write('<input type="hidden" id="newInvPicId1" value="'+randomInvPicId1+'"><img src="/CoffeeInc2/assets/inv_'+randomInvPicId1+'.svg" class="investor_hire_pic1" id="invHirePic1">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newEmpSkill1" value="'+randomEmpHiringSkill1+'" class="stat_item_inp"></a>');
-              document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomEmpHiringSat1+'" class="stat_item_inp"></a></br>');
-              document.write('<a data-icon="left"><input type="text" id="newEmpSalary1" value="'+randomEmpHiringSalary1+'" class="stat_item_inp_sal"></a>');
+              document.write('<a data-icon="user"><input type="text" id="newInvInt1" value="'+randomInvInt1+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newInvEquity1" value="'+randomInvEquity1+'" class="stat_item_inp"></a></br>');//hack
+              document.write('<a data-icon="left"><input type="text" id="newInvOffer1" value="'+randomInvOffer1+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
               </script>
             </a>
           </div>        
           <div class="five columns">
-            <a href="#back" data-router="section" id="randomEmp2">
+            <a href="#back" data-router="section" id="randomInv2">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId2" value="'+empHiringPicId2+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
+              document.write('<input type="hidden" id="newInvPicId2" value="'+randomInvPicId2+'"><img src="/CoffeeInc2/assets/inv_'+randomInvPicId2+'.svg" class="investor_hire_pic2" id="invHirePic2">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newEmpSkill2" value="'+randomEmpHiringSkill2+'" class="stat_item_inp"></a>');
-              document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomEmpHiringSat2+'" class="stat_item_inp"></a></br>');//hack
-              document.write('<a data-icon="left"><input type="text" id="newEmpSalary2" value="'+randomEmpHiringSalary2+'" class="stat_item_inp_sal"></a>');
+              document.write('<a data-icon="user"><input type="text" id="newInvInt2" value="'+randomInvInt2+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newInvEquity2" value="'+randomInvEquity2+'" class="stat_item_inp"></a></br>');//hack
+              document.write('<a data-icon="left"><input type="text" id="newInvOffer2" value="'+randomInvOffer2+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
               </script>
             </a>
           </div>
           <div class="five columns">
-            <a href="#back" data-router="section" id="randomEmp3">
+            <a href="#back" data-router="section" id="randomInv3">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId3" value="'+empHiringPicId3+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
+              document.write('<input type="hidden" id="newInvPicId3" value="'+randomInvPicId3+'"><img src="/CoffeeInc2/assets/inv_'+randomInvPicId3+'.svg" class="investor_hire_pic3" id="invHirePic3">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newEmpSkill3" value="'+randomEmpHiringSkill3+'" class="stat_item_inp"></a>');
-              document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomEmpHiringSat3+'" class="stat_item_inp"></a></br>');
-              document.write('<a data-icon="left"><input type="text" id="newEmpSalary3" value="'+randomEmpHiringSalary3+'" class="stat_item_inp_sal"></a>');
+              document.write('<a data-icon="user"><input type="text" id="newInvInt3" value="'+randomInvInt3+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newInvEquity3" value="'+randomInvEquity3+'" class="stat_item_inp"></a></br>');//hack
+              document.write('<a data-icon="left"><input type="text" id="newInvOffer3" value="'+randomInvOffer3+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
               </script>
             </a>
           </div>
           <div class="five columns">
-            <a href="#back" data-router="section" id="randomEmp4">
+            <a href="#back" data-router="section" id="randomInv4">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId4" value="'+empHiringPicId4+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
+              document.write('<input type="hidden" id="newInvPicId4" value="'+randomInvPicId4+'"><img src="/CoffeeInc2/assets/inv_'+randomInvPicId4+'.svg" class="investor_hire_pic4" id="invHirePic4">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newEmpSkill4" value="'+randomEmpHiringSkill4+'" class="stat_item_inp"></a>');
-              document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomEmpHiringSat4+'" class="stat_item_inp"></a></br>');
-              document.write('<a data-icon="left"><input type="text" id="newEmpSalary4" value="'+randomEmpHiringSalary4+'" class="stat_item_inp_sal"></a>');
+              document.write('<a data-icon="user"><input type="text" id="newInvInt4" value="'+randomInvInt4+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newInvEquity4" value="'+randomInvEquity4+'" class="stat_item_inp"></a></br>');//hack
+              document.write('<a data-icon="left"><input type="text" id="newInvOffer4" value="'+randomInvOffer4+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
               </script>
             </a>
