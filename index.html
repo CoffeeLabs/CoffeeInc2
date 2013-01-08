@@ -107,7 +107,7 @@
         
         $('.employee_hire_pic1').click(function(e){
           e.preventDefault();       
-          var empPic=$("#newEmpPicId1").val();
+          var empPic=$("#newEmpempHiringPicId1").val();
           var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
           var empSkill=$("#newEmpSkill1").val();
           var empSat=$("#newEmpSat1").val();
@@ -116,7 +116,7 @@
         });
       $('.employee_hire_pic2').click(function(e){
         e.preventDefault();
-        var empPic=$("#newEmpPicId2").val();
+        var empPic=$("#newEmpempHiringPicId2").val();
         var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
         var empSkill=$("#newEmpSkill2").val();
         var empSat=$("#newEmpSat2").val();
@@ -125,7 +125,7 @@
       });
       $('.employee_hire_pic3').click(function(e){
         e.preventDefault();
-        var empPic=$("#newEmpPicId3").val();
+        var empPic=$("#newEmpempHiringPicId3").val();
         var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
         var empSkill=$("#newEmpSkill3").val();
         var empSat=$("#newEmpSat3").val();
@@ -134,7 +134,7 @@
       });
       $('.employee_hire_pic4').click(function(e){
         e.preventDefault();
-        var empPic=$("#newEmpPicId4").val();
+        var empPic=$("#newEmpempHiringPicId4").val();
         var empName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
         var empSkill=$("#newEmpSkill4").val();
         var empSat=$("#newEmpSat4").val();
@@ -168,9 +168,9 @@
       $('.fireEmp').click(function(e){
         e.preventDefault();
         alert($.totalStorage.getItem("avSalary"));
-        $.totalStorage.setItem("avSalary",$.totalStorage.getItem("avSalary")-parseInt(employeeInformation[position][6]));
+        $.totalStorage.setItem("avSalary",$.totalStorage.getItem("avSalary")-parseInt(employeeInformation[currentEmpPosition][6]));
         alert($.totalStorage.getItem("avSalary"));
-        employeeInformation.splice(position,1);
+        employeeInformation.splice(currentEmpPosition,1);
         $.totalStorage.setItem("emp", employeeInformation);
         alert('Employee got fired! new value for key emp: '+employeeInformation+";");
         window.setTimeout("location.reload(true);",0);
@@ -252,7 +252,7 @@
             document.write("<div class='three rows'>");
           }
           document.write("<div class='three columns'>");
-          document.write("<a href='#invest' data-router='section' id='inv"+x+"'>");
+          document.write("<a href='#investment' data-router='section' id='inv"+x+"'>");
           document.write("<img src='' id='invPic"+x+"' onclick='generateNewInv();'>");
           document.write("</a>");
           document.write("</div>");
@@ -260,44 +260,6 @@
             document.write("</div>");
         }
         </script>
-        <!--
-        <div class="three columns">
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-        </div>
-
-
-        <div class="three columns">
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-        </div>
-
-        <div class="three columns">
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-          <div class="three rows">
-            <a href="#employee_profile" data-router="section"><img src="assets/inv_1.png"></a>
-          </div>
-        </div>-->
-
         <div class="one column"></div>          
 
       </article>
@@ -408,11 +370,11 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp1">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId1" value="'+picId1+'"><img src="/CoffeeInc2/assets/emp_'+picId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
+              document.write('<input type="hidden" id="newEmpempHiringPicId1" value="'+empHiringPicId1+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newEmpSkill1" value="'+randomSkill1+'" class="stat_item_inp"></a>');
-              document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomSat1+'" class="stat_item_inp"></a></br>');
-              document.write('<a data-icon="left"><input type="text" id="newEmpSalary1" value="'+randomSalary1+'" class="stat_item_inp_sal"></a>');
+              document.write('<a data-icon="user"><input type="text" id="newEmpSkill1" value="'+randomEmpHiringSkill1+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomEmpHiringSat1+'" class="stat_item_inp"></a></br>');
+              document.write('<a data-icon="left"><input type="text" id="newEmpSalary1" value="'+randomEmpHiringSalary1+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
               </script>
             </a>
@@ -420,11 +382,11 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp2">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId2" value="'+picId2+'"><img src="/CoffeeInc2/assets/emp_'+picId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
+              document.write('<input type="hidden" id="newEmpempHiringPicId2" value="'+empHiringPicId2+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newEmpSkill2" value="'+randomSkill2+'" class="stat_item_inp"></a>');
-              document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomSat2+'" class="stat_item_inp"></a></br>');//hack
-              document.write('<a data-icon="left"><input type="text" id="newEmpSalary2" value="'+randomSalary2+'" class="stat_item_inp_sal"></a>');
+              document.write('<a data-icon="user"><input type="text" id="newEmpSkill2" value="'+randomEmpHiringSkill2+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomEmpHiringSat2+'" class="stat_item_inp"></a></br>');//hack
+              document.write('<a data-icon="left"><input type="text" id="newEmpSalary2" value="'+randomEmpHiringSalary2+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
               </script>
             </a>
@@ -432,11 +394,11 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp3">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId3" value="'+picId3+'"><img src="/CoffeeInc2/assets/emp_'+picId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
+              document.write('<input type="hidden" id="newEmpempHiringPicId3" value="'+empHiringPicId3+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newEmpSkill3" value="'+randomSkill3+'" class="stat_item_inp"></a>');
-              document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomSat3+'" class="stat_item_inp"></a></br>');
-              document.write('<a data-icon="left"><input type="text" id="newEmpSalary3" value="'+randomSalary3+'" class="stat_item_inp_sal"></a>');
+              document.write('<a data-icon="user"><input type="text" id="newEmpSkill3" value="'+randomEmpHiringSkill3+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomEmpHiringSat3+'" class="stat_item_inp"></a></br>');
+              document.write('<a data-icon="left"><input type="text" id="newEmpSalary3" value="'+randomEmpHiringSalary3+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
               </script>
             </a>
@@ -444,11 +406,11 @@
           <div class="five columns">
             <a href="#back" data-router="section" id="randomEmp4">
               <script type="text/javascript">
-              document.write('<input type="hidden" id="newEmpPicId4" value="'+picId4+'"><img src="/CoffeeInc2/assets/emp_'+picId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
+              document.write('<input type="hidden" id="newEmpempHiringPicId4" value="'+empHiringPicId4+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newEmpSkill4" value="'+randomSkill4+'" class="stat_item_inp"></a>');
-              document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomSat4+'" class="stat_item_inp"></a></br>');
-              document.write('<a data-icon="left"><input type="text" id="newEmpSalary4" value="'+randomSalary4+'" class="stat_item_inp_sal"></a>');
+              document.write('<a data-icon="user"><input type="text" id="newEmpSkill4" value="'+randomEmpHiringSkill4+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomEmpHiringSat4+'" class="stat_item_inp"></a></br>');
+              document.write('<a data-icon="left"><input type="text" id="newEmpSalary4" value="'+randomEmpHiringSalary4+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
               </script>
             </a>
@@ -459,8 +421,99 @@
     <!-- /////////// END /////////// -->
     <!--//////////// HIRE EMPLOYEES ////////////-->
 
+    <!--//////////// INVESTOR PROFILE ////////////-->    
+    <section id="invsetor_profile" data-transition="slide">
+      <header id="invProfileName" data-title="Invsetor Profile">
+        <nav class="left box">
+          <a href="#back" data-router="section" data-icon="left"></a>
+        </nav>
+        <nav class="right box">
+          <a href="#back" data-router="section" data-icon="close" data-label="Fire" class="fireInv"></a>
+        </nav>
+      </header>
+
+      <article class="scroll">
+        <form class="margined">
+
+          <img src='' id='inv_profile_pic' >      
+
+          <label id="invProfileSkill"></label>
+          <div id="progressProfileSkill" data-progress="10%"></div>
+          <label id="invProfileSat"></label>
+          <div id="progressProfileSat" data-progress="10%"></div>
+          <label id="invProfileSalary"></label>
+          <div id="progressProfileSat" data-progress="10%"></div>
+        </form>
+      </article>
+    </section>
+    <!-- /////////// END /////////// -->
+    <!--//////////// INVESTOR PROFILE ////////////-->
+
+<!--//////////// HIRE INVESTORS ////////////-->    
+
+    <section id="investment" data-transition="slide">
+      <header data-title="Get New Investors" class="brownbg">
+        <nav class="left box">
+          <a href="#back" data-router="section" data-icon="left"></a>
+        </nav>
+      </header>
 
 
+      <article class="scroll">
+        <div class="five rows">
+          <div class="five columns">
+            <a href="#back" data-router="section" id="randomEmp1">
+              <script type="text/javascript">
+              document.write('<input type="hidden" id="newEmpempHiringPicId1" value="'+empHiringPicId1+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId1+'.svg" class="employee_hire_pic1" id="hirePic1">');
+              document.write('<div class="hireinfo">');
+              document.write('<a data-icon="user"><input type="text" id="newEmpSkill1" value="'+randomEmpHiringSkill1+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newEmpSat1" value="'+randomEmpHiringSat1+'" class="stat_item_inp"></a></br>');
+              document.write('<a data-icon="left"><input type="text" id="newEmpSalary1" value="'+randomEmpHiringSalary1+'" class="stat_item_inp_sal"></a>');
+              document.write('</div>');
+              </script>
+            </a>
+          </div>        
+          <div class="five columns">
+            <a href="#back" data-router="section" id="randomEmp2">
+              <script type="text/javascript">
+              document.write('<input type="hidden" id="newEmpempHiringPicId2" value="'+empHiringPicId2+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId2+'.svg" class="employee_hire_pic2" id="hirePic2">');
+              document.write('<div class="hireinfo">');
+              document.write('<a data-icon="user"><input type="text" id="newEmpSkill2" value="'+randomEmpHiringSkill2+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newEmpSat2" value="'+randomEmpHiringSat2+'" class="stat_item_inp"></a></br>');//hack
+              document.write('<a data-icon="left"><input type="text" id="newEmpSalary2" value="'+randomEmpHiringSalary2+'" class="stat_item_inp_sal"></a>');
+              document.write('</div>');
+              </script>
+            </a>
+          </div>
+          <div class="five columns">
+            <a href="#back" data-router="section" id="randomEmp3">
+              <script type="text/javascript">
+              document.write('<input type="hidden" id="newEmpempHiringPicId3" value="'+empHiringPicId3+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId3+'.svg" class="employee_hire_pic3" id="hirePic3">');
+              document.write('<div class="hireinfo">');
+              document.write('<a data-icon="user"><input type="text" id="newEmpSkill3" value="'+randomEmpHiringSkill3+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newEmpSat3" value="'+randomEmpHiringSat3+'" class="stat_item_inp"></a></br>');
+              document.write('<a data-icon="left"><input type="text" id="newEmpSalary3" value="'+randomEmpHiringSalary3+'" class="stat_item_inp_sal"></a>');
+              document.write('</div>');
+              </script>
+            </a>
+          </div>
+          <div class="five columns">
+            <a href="#back" data-router="section" id="randomEmp4">
+              <script type="text/javascript">
+              document.write('<input type="hidden" id="newEmpempHiringPicId4" value="'+empHiringPicId4+'"><img src="/CoffeeInc2/assets/emp_'+empHiringPicId4+'.svg" class="employee_hire_pic4" id="hirePic4">');
+              document.write('<div class="hireinfo">');
+              document.write('<a data-icon="user"><input type="text" id="newEmpSkill4" value="'+randomEmpHiringSkill4+'" class="stat_item_inp"></a>');
+              document.write('<a data-icon="home"><input type="text" id="newEmpSat4" value="'+randomEmpHiringSat4+'" class="stat_item_inp"></a></br>');
+              document.write('<a data-icon="left"><input type="text" id="newEmpSalary4" value="'+randomEmpHiringSalary4+'" class="stat_item_inp_sal"></a>');
+              document.write('</div>');
+              </script>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- /////////// END /////////// -->
+    <!--//////////// HIRE INVESTORS ////////////-->
 
 
 
