@@ -89,9 +89,9 @@
         if(!$.totalStorage.getItem("stat_talent"))
           $.totalStorage.setItem("stat_talent", 0);
         statusbarTalent=$.totalStorage.getItem("stat_talent");
-        if(!$.totalStorage.getItem("stat_patents"))
-          $.totalStorage.setItem("stat_patents", 0);
-        statusbarPatents=$.totalStorage.getItem("stat_patents");
+        if(!$.totalStorage.getItem("stat_equity"))
+          $.totalStorage.setItem("stat_equity", 100);
+        statusbarEquity=$.totalStorage.getItem("stat_equity");
         if(!$.totalStorage.getItem("stat_sat"))
           $.totalStorage.setItem("stat_sat", 0);
         statusbarSatisfaction=$.totalStorage.getItem("stat_sat");
@@ -105,8 +105,6 @@
         statusbarBudget=$.totalStorage.getItem("stat_budget");
         if(!$.totalStorage.getItem("avSalary"))
           $.totalStorage.setItem("avSalary",0);
-        if(!$.totalStorage.getItem("equity"))
-          $.totalStorage.setItem("equity",100);
         
         paintEmpField();
         paintInvField();
@@ -195,13 +193,12 @@
         $.totalStorage("inv", investorInformation);
         $.totalStorage.setItem("stat_product", 0);
         $.totalStorage.setItem("stat_talent", 0);
-        $.totalStorage.setItem("stat_patents", 0);
         $.totalStorage.setItem("stat_sat", 0);
         $.totalStorage.setItem("stat_invint", 0);
         $.totalStorage.setItem("stat_old_budget", 0);
         $.totalStorage.setItem("avSalary",0);
         $.totalStorage.setItem("stat_budget", 10000);
-        $.totalStorage.setItem("equity",100);
+        $.totalStorage.setItem("stat_equity",100);
         alert('New Game');
         //paintEmpField();
         //updateHeader();
@@ -251,14 +248,14 @@
         <div data-icon="right" class="statusbar_item">
           <input type="text" readonly value="0" id="stat_talent" class="stat_item_inp">
         </div>
-        <div data-icon="user" class="statusbar_item">
-          <input type="text" readonly value="0" id="stat_patents" class="stat_item_inp">
-        </div>
         <div data-icon="upload" class="statusbar_item">
           <input type="text" readonly value="0" id="stat_sat" class="stat_item_inp">
         </div>
         <div data-icon="up" class="statusbar_item">
           <input type="text" readonly value="0" id="stat_invint" class="stat_item_inp">
+        </div>
+        <div data-icon="user" class="statusbar_item">
+          <input type="text" readonly value="0" id="stat_equity" class="stat_item_inp">
         </div>
         <div data-icon="left" class="statusbar_item">
           <input type="text" readonly value="0" id="stat_budget" class="stat_item_inp">
@@ -344,7 +341,7 @@
 
     <!--//////////// EMPLOYEE PROFILE ////////////-->    
     <section id="employee_profile" data-transition="slide">
-      <header id="empProfileName" data-title="Employee Profile">
+      <header id="empProfileName" class="title" data-title="Employee Profile">
         <nav class="left box">
           <a href="#back" data-router="section" data-icon="left"></a>
         </nav>
@@ -378,12 +375,9 @@
           </table>-->
           <div id="empProgressProfileSat" data-progress="10%"></div>
           <label id="empProfileSalary"></label>
-          <table border="0" cellspacing="0" cellpadding="0" width="100%">
-            <tr>
-              <td><a id="salaryDec" href="javascript:decSalary();"><div class="dec">-</div></a></td>
-              <td><div id="empProgressProfileSalary" data-progress="10%"></div></td>
-              <td><a id="salaryInc" href="javascript:incSalary();"><div class="inc">+</div></a></td>
-          </table>
+          <div id="empProgressProfileSalary" data-progress="10%"></div>
+          <button id="salaryDec" onclick="javascript:decSalary();" class="button red">-</button>
+          <button id="salaryInc" onclick="javascript:incSalary();" class="button green">+</button>
           <!--<input type="range" id="empProgressProfileSalary" data-progress="10%" />-->
         </form>
       </article>
