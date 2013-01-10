@@ -2,9 +2,10 @@
 * stattdessen % besitz an der firma anzeigen
 * /10 bei product score
 * notification bei sieg und loose
-* investor profile
+* investor profil
 * investor fire (investment zurückgeben + zinsen?)
 * namen in employee/investor profile (mit input)
 * verfügbare namen ändern
 * css für +/- salary buttons
-
+* pausen für employees (alle random*10s stoppt die animation und das basis fram wird gezeigt)
+* 
