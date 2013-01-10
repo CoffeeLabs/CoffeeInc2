@@ -1,7 +1,6 @@
 .mainmenu-button {
 	width:80%;
 	margin: 0 auto;
-	background-color: red;
 }
 
 #main > header {
@@ -176,7 +175,7 @@ button {
 footer > .brownbg > * {
 	border-top: 2px solid black !important;
 }
-header.brownbg > * {
+header.brownbg {
 	border-bottom: 2px solid black !important;
 }
 /*.brownbg > *.* {
@@ -188,4 +187,45 @@ header.brownbg > * {
 #salaryInc, #salaryDec{
   width: 100%;
   height: 100%;
+}
+nav.groupbar > a, footer nav > a {
+	-mox-flexbox: 1;
+	flexbox: 1;
+}
+section > footer > nav a.current  {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	background-color: #7a5a44 !important;	
+	border-right: 2px solid black !important;
+	border-left: 2px solid black !important;
+}
+section > footer > nav a {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;	
+}
+.progress .bar {
+	background-color: #eee !important;
+	border: 2px solid black !important;
+	border-radius: 10px !important;
+}
+.progress .bar .value {
+	background-color: #7a5a44 !important;
+	border: 2px solid black !important;
+	border-radius: 10px !important;
+	margin-top: -2px;
+	margin-left: -2px;
+}
+button#salaryDec {
+	width: 47% !important;
+	height: 50px !important;
+	font-size: 1.8em !important;
+	font-weight: bold !important;
+	float: left;
+}
+button#salaryInc {
+	width: 47% !important;
+	height: 50px !important;
+	font-size: 1.8em;
+	font-weight: bold;
+	float: right;
 }
