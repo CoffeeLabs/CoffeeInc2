@@ -48,8 +48,8 @@
 	margin: 20px 0 2px 33%;
 	width: 33%; 
 }
-.employee_hire_pic1, .employee_hire_pic2, .employee_hire_pic3, .employee_hire_pic4 {
-	margin: 30px 0 2px 22%;
+.employee_hire_pic1, .employee_hire_pic2, .employee_hire_pic3, .employee_hire_pic4, .investor_hire_pic1, .investor_hire_pic2, .investor_hire_pic3, .investor_hire_pic4 {
+	margin: 3% 0 0px 20% !important;
 	width: 65%;
 	margin-top: 30px;
 }
