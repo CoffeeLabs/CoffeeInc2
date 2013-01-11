@@ -64,6 +64,7 @@
     <script src="lib/jquery.js"></script>
     <script src="lib/jquery.total-storage.js"></script>                
     <script src="lib/coffeeinc.js"></script>
+    <script src="lib/game.js"></script>
     <!-- Lungo - Sandbox App -->
     <script type="text/javascript">
       $(document).ready(function(){
@@ -106,10 +107,12 @@
         statusbarBudget=$.totalStorage.getItem("stat_budget");
         if(!$.totalStorage.getItem("avSalary"))
           $.totalStorage.setItem("avSalary",0);
+        if(!$.totalStorage.getItem("counter"))
+          $.totalStorage.setItem("counter",0);
         
         paintEmpField();
         paintInvField();
-        //game();
+        game();
         
         $('.employee_hire_pic1').click(function(e){
           e.preventDefault();       
@@ -193,6 +196,7 @@
         $.totalStorage.setItem("avSalary",0);
         $.totalStorage.setItem("stat_budget", 10000);
         $.totalStorage.setItem("stat_equity",100);
+        $.totalStorage.setItem("counter",0);
         alert('New Game');
         //paintEmpField();
         //updateHeader();
@@ -220,22 +224,20 @@
         $.totalStorage.setItem("emp", employeeInformation);
         employeeInformation=$.totalStorage.getItem("emp");
         alert('Employee got fired! new value for key emp: '+employeeInformation+";");
-        //window.setTimeout("location.reload(true);",0);
+        window.setTimeout("location.reload(true);",0);
         paintEmpField();
       });
       
       $('.fireInv').click(function(e){
         e.preventDefault();
         alert("-"+investorInformation[currentInvPosition][3]+"$ Investment Offer");
-        //var afterNotification = function(){};
-        //Lungo.Notification.alert("Success", "Successful operation", null, false, 0, afterNotification);
         $.totalStorage.setItem("stat_equity", $.totalStorage.getItem("stat_equity")+parseInt(investorInformation[currentInvPosition][2]));
         $.totalStorage.setItem("stat_budget",$.totalStorage.getItem("stat_budget")-parseInt(investorInformation[currentInvPosition][3]));
         investorInformation.splice(currentInvPosition,1);
         $.totalStorage.setItem("inv", investorInformation);
         investorInformation=$.totalStorage.getItem("inv");
         alert('Investor got fired! new value for key inv '+investorInformation+";");
-        //window.setTimeout("location.reload(true);",0);
+        window.setTimeout("location.reload(true);",0);
         paintEmpField();
       });
       function getAllEmp(){
@@ -273,6 +275,9 @@
         </div>
         <div data-icon="user" class="statusbar_item">
           <input type="text" readonly value="0" id="stat_equity" class="stat_item_inp">
+        </div>
+        <div data-icon="user" class="statusbar_item">
+          <input type="text" readonly value="0" id="tmpcounts" class="stat_item_inp">
         </div>
         <div data-icon="left" class="statusbar_item">
           <input type="text" readonly value="0" id="stat_budget" class="stat_item_inp">
@@ -345,7 +350,6 @@
           <a href="#employees" data-router="article" class="current" data-icon="user"></a>
           <a href="#investors" data-router="article" data-icon="inbox"></a>
           <a href="#menu-ingame" data-router="article" data-icon="settings"></a>
-          <a href="#next_round" data-icon="right" data-label="Next Round" onclick="nextRound();"></a>
         </nav>
       </footer>
 
