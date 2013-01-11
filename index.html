@@ -60,8 +60,8 @@
     <script src="lib/components/quojs/quo.js"></script>
     <script src="lib/components/lungo/lungo.js"></script>
 
-  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>-->
-    <script src="lib/jquery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+    <!--<script src="lib/jquery.js"></script>-->
     <script src="lib/jquery.total-storage.js"></script>                
     <script src="lib/coffeeinc.js"></script>
     <!-- Lungo - Sandbox App -->
@@ -81,7 +81,7 @@
         if($.totalStorage.getItem("inv")){
           investorInformation=$.totalStorage.getItem("inv");
         }else{
-          investorInformation.push([0,0,0,0,0]);
+          investorInformation.push([0,0,0,0]);
           $.totalStorage("inv",investorInformation);
         }
         if(!$.totalStorage.getItem("stat_product"))
@@ -151,37 +151,33 @@
           e.preventDefault();       
           var tmpPicId=$("#newInvPicId1").val();
           var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-          var tmpInt=$("#newInvInt1").val();
           var tmpEquity=$("#newInvEquity1").val();
           var tmpOffer=$("#newInvOffer1").val();
-          hireInvestor(tmpPicId,tmpName,tmpInt,tmpEquity,tmpOffer);
+          hireInvestor(tmpPicId,tmpName,tmpEquity,tmpOffer);
         });
       $('.investor_hire_pic2').click(function(e){
         e.preventDefault();
         var tmpPicId=$("#newInvPicId2").val();
         var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-        var tmpInt=$("#newInvInt2").val();
         var tmpEquity=$("#newInvEquity2").val();
         var tmpOffer=$("#newInvOffer2").val();
-        hireInvestor(tmpPicId,tmpName,tmpInt,tmpEquity,tmpOffer);
+        hireInvestor(tmpPicId,tmpName,tmpEquity,tmpOffer);
       });
       $('.investor_hire_pic3').click(function(e){
         e.preventDefault();
         var tmpPicId=$("#newInvPicId3").val();
         var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-        var tmpInt=$("#newInvInt3").val();
         var tmpEquity=$("#newInvEquity3").val();
         var tmpOffer=$("#newInvOffer3").val();
-        hireInvestor(tmpPicId,tmpName,tmpInt,tmpEquity,tmpOffer);
+        hireInvestor(tmpPicId,tmpName,tmpEquity,tmpOffer);
       });
       $('.investor_hire_pic4').click(function(e){
         e.preventDefault();
         var tmpPicId=$("#newInvPicId4").val();
         var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
-        var tmpInt=$("#newInvInt4").val();
         var tmpEquity=$("#newInvEquity4").val();
         var tmpOffer=$("#newInvOffer4").val();
-        hireInvestor(tmpPicId,tmpName,tmpInt,tmpEquity,tmpOffer);
+        hireInvestor(tmpPicId,tmpName,tmpEquity,tmpOffer);
       });
       
       $('.new_game').click(function(e){
@@ -190,7 +186,7 @@
         employeeInformation.push([0,0,0,0,0,0,0]);
         $.totalStorage("emp", employeeInformation);
         investorInformation=[];
-        investorInformation.push([0,0,0,0,0]);
+        investorInformation.push([0,0,0,0]);
         $.totalStorage("inv", investorInformation);
         $.totalStorage.setItem("stat_product", 0);
         $.totalStorage.setItem("stat_talent", 0);
@@ -213,14 +209,25 @@
         
       $('.fireEmp').click(function(e){
         e.preventDefault();
-        alert($.totalStorage.getItem("avSalary"));
         $.totalStorage.setItem("avSalary",$.totalStorage.getItem("avSalary")-parseInt(employeeInformation[currentEmpPosition][6]));
-        alert($.totalStorage.getItem("avSalary"));
         employeeInformation.splice(currentEmpPosition,1);
         $.totalStorage.setItem("emp", employeeInformation);
-        alert('Employee got fired! new value for key emp: '+employeeInformation+";");
+        //alert('Employee got fired! new value for key emp: '+employeeInformation+";");
         window.setTimeout("location.reload(true);",0);
-        //paintEmpField();
+        paintEmpField();
+      });
+      
+      $('.fireInv').click(function(e){
+        e.preventDefault();
+        alert("-"+investorInformation[currentInvPosition][3]+"$ Investment Offer");
+        //var afterNotification = function(){};
+        //Lungo.Notification.alert("Success", "Successful operation", null, false, 0, afterNotification);
+        $.totalStorage.setItem("stat_budget",$.totalStorage.getItem("stat_budget")-parseInt(investorInformation[currentInvPosition][3]));
+        investorInformation.splice(currentInvPosition,1);
+        $.totalStorage.setItem("inv", investorInformation);
+        alert('Investor got fired! new value for key inv '+investorInformation+";");
+        //window.setTimeout("location.reload(true);",0);
+        paintEmpField();
       });
       function getAllEmp(){
         return $.totalStorage.getAllEmp();
@@ -354,32 +361,13 @@
         <form class="margined">
           <img src='' id='emp_profile_pic' >      
           <label id="empProfileSkill"></label>
-          <!--<table border="0" cellspacing="0" cellpadding="0" width="100%">
-            <tr>
-              <script type="text/javascript">
-                for(var i =0; i<100; i++){
-                  document.write("<td id='progressBarSkill"+i+"' style='background-color:lightgrey; line-height:12px;'>&nbsp;</td>");
-                }
-              </script>
-            </tr>
-          </table>-->
           <div id="empProgressProfileSkill" data-progress="10%"></div>
           <label id="empProfileSat"></label>
-          <!--<table border="0" cellspacing="0" cellpadding="0" width="100%">
-            <tr>
-              <script type="text/javascript">
-                for(var i =0; i<100; i++){
-                  document.write("<td id='progressBarSat"+i+"' style='background-color:lightgrey; line-height:12px;'>&nbsp;</td>");
-                }
-              </script>
-            </tr>
-          </table>-->
           <div id="empProgressProfileSat" data-progress="10%"></div>
           <label id="empProfileSalary"></label>
           <div id="empProgressProfileSalary" data-progress="10%"></div>
-          <button id="salaryDec" onclick="javascript:decSalary();" class="big button red">–</button>
-          <button id="salaryInc" onclick="javascript:incSalary();" class="big button green">+</button>
-          <!--<input type="range" id="empProgressProfileSalary" data-progress="10%" />-->
+          <a id="salaryDec" href="javascript:decSalary();">-</a>
+          <a id="salaryInc" href="javascript:incSalary();">+</a>
         </form>
       </article>
     </section>
@@ -468,12 +456,10 @@
 
           <img src='' id='inv_profile_pic' >      
 
-          <label id="invProfileSkill"></label>
-          <div id="progressProfileSkill" data-progress="10%"></div>
-          <label id="invProfileSat"></label>
-          <div id="progressProfileSat" data-progress="10%"></div>
-          <label id="invProfileSalary"></label>
-          <div id="progressProfileSat" data-progress="10%"></div>
+          <label id="invProfileEquity"></label>
+          <div id="invProgressProfileEquity" data-progress="10%"></div>
+          <label id="invProfileOffer"></label>
+          <div id="invProgressProfileOffer" data-progress="10%"></div>
         </form>
       </article>
     </section>
@@ -497,7 +483,6 @@
               <script type="text/javascript">
               document.write('<input type="hidden" id="newInvPicId1" value="'+randomInvPicId1+'"><img src="/CoffeeInc2/assets/inv_'+randomInvPicId1+'.svg" class="investor_hire_pic1" id="invHirePic1">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newInvInt1" value="'+randomInvInt1+'" class="stat_item_inp"></a>');
               document.write('<a data-icon="home"><input type="text" id="newInvEquity1" value="'+randomInvEquity1+'" class="stat_item_inp"></a></br>');//hack
               document.write('<a data-icon="left"><input type="text" id="newInvOffer1" value="'+randomInvOffer1+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
@@ -509,7 +494,6 @@
               <script type="text/javascript">
               document.write('<input type="hidden" id="newInvPicId2" value="'+randomInvPicId2+'"><img src="/CoffeeInc2/assets/inv_'+randomInvPicId2+'.svg" class="investor_hire_pic2" id="invHirePic2">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newInvInt2" value="'+randomInvInt2+'" class="stat_item_inp"></a>');
               document.write('<a data-icon="home"><input type="text" id="newInvEquity2" value="'+randomInvEquity2+'" class="stat_item_inp"></a></br>');//hack
               document.write('<a data-icon="left"><input type="text" id="newInvOffer2" value="'+randomInvOffer2+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
@@ -521,7 +505,6 @@
               <script type="text/javascript">
               document.write('<input type="hidden" id="newInvPicId3" value="'+randomInvPicId3+'"><img src="/CoffeeInc2/assets/inv_'+randomInvPicId3+'.svg" class="investor_hire_pic3" id="invHirePic3">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newInvInt3" value="'+randomInvInt3+'" class="stat_item_inp"></a>');
               document.write('<a data-icon="home"><input type="text" id="newInvEquity3" value="'+randomInvEquity3+'" class="stat_item_inp"></a></br>');//hack
               document.write('<a data-icon="left"><input type="text" id="newInvOffer3" value="'+randomInvOffer3+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');
@@ -533,7 +516,6 @@
               <script type="text/javascript">
               document.write('<input type="hidden" id="newInvPicId4" value="'+randomInvPicId4+'"><img src="/CoffeeInc2/assets/inv_'+randomInvPicId4+'.svg" class="investor_hire_pic4" id="invHirePic4">');
               document.write('<div class="hireinfo">');
-              document.write('<a data-icon="user"><input type="text" id="newInvInt4" value="'+randomInvInt4+'" class="stat_item_inp"></a>');
               document.write('<a data-icon="home"><input type="text" id="newInvEquity4" value="'+randomInvEquity4+'" class="stat_item_inp"></a></br>');//hack
               document.write('<a data-icon="left"><input type="text" id="newInvOffer4" value="'+randomInvOffer4+'" class="stat_item_inp_sal"></a>');
               document.write('</div>');

@@ -43,7 +43,7 @@
 * {
 	text-decoration: none;
 }
-#emp_profile_pic {
+#emp_profile_pic, #inv_profile_pic {
 	margin: 20px 0 2px 33%;
 	width: 33%; 
 }
@@ -184,10 +184,6 @@ header.brownbg {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }*/
-#salaryInc, #salaryDec{
-  width: 100%;
-  height: 100%;
-}
 nav.groupbar > a, footer nav > a {
 	-mox-flexbox: 1;
 	flexbox: 1;
@@ -215,17 +211,27 @@ section > footer > nav a {
 	margin-top: -2px;
 	margin-left: -2px;
 }
-button#salaryDec {
-	width: 47% !important;
-	height: 50px !important;
-	font-size: 1.8em !important;
-	font-weight: bold !important;
-	float: left;
+#salaryDec {
+  width: 47% !important;
+  height: 50px !important;
+  font-size: 1.8em !important;
+  font-weight: bold !important;
+  float: left;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: red;
+  color: black;
 }
-button#salaryInc {
+#salaryInc {
 	width: 47% !important;
 	height: 50px !important;
 	font-size: 1.8em;
 	font-weight: bold;
-	float: right;
+    float: right;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: green;
+    color: black;
 }
