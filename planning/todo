@@ -1,11 +1,16 @@
-* patente streichen
-* stattdessen % besitz an der firma anzeigen
 * /10 bei product score
 * notification bei sieg und loose
 * investor profil
-* investor fire (investment zurückgeben + zinsen?)
-* namen in employee/investor profile (mit input)
-* verfügbare namen ändern
-* css für +/- salary buttons
-* pausen für employees (alle random*10s stoppt die animation und das basis fram wird gezeigt)
-* 
+* investor fire zinsen
+* namen in employee/investor profile (mit input?)
+* pausen für employees (alle random*10s stoppt die animation und das basis frame wird gezeigt)
+* algorithmus für equity
+* algorithmus für investor offer
+* limits für product, talent, salary
+* limit für min salary bei ca 1500
+* kein investor darf mehr equity als der spieler haben
+* bei 3 zyklen mit budget <=0 spiel game over
+* investoren lehnen entscheidungen ab (random abhängig von der secret variable, vorerst nur für hire/fire)
+* css für hire und profile topbar
+* iconfont exportieren und einsetzen
+* investor interest streichen -> angebote direkt abhängig von product und talent
