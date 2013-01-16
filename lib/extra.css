@@ -4,26 +4,26 @@
 }
 
 #main > header {
-	background-color: #222 !important;
-	color: #999 !important;
+	background-color: #4d332 !important;
+	color: #white !important;
 /*	border-bottom: 4px solid #666;*/
 }
 #employee_profile > header {
-	background-color: #222 !important;	
-	color: #999 !important;
+	background-color: #4d332 !important;	
+	color: #white !important;
 }
 * > header {
-	background-color: #222 !important;
+	background-color: #4d332 !important;
 }
 * > header * {
-	color: #999 !important;
+	color: #white !important;
 }
 * > footer > * {
-	background-color: #222 !important;
-	color: #999 !important;
+	background-color: #4d332 !important;
+	color: #white !important;
 }
 .statusbar_item {
-	color: #999 !important;
+	color: #white !important;
 	margin-left: 3%;
 	float: left;
 	font-size: 12px;
