@@ -4,22 +4,22 @@
 }
 
 #main > header {
-	background-color: #4d332 !important;
+	background-color: #4d3321 !important;
 	color: #white !important;
 /*	border-bottom: 4px solid #666;*/
 }
 #employee_profile > header {
-	background-color: #4d332 !important;	
+	background-color: #4d3321 !important;	
 	color: #white !important;
 }
 * > header {
-	background-color: #4d332 !important;
+	background-color: #4d3321 !important;
 }
 * > header * {
 	color: #white !important;
 }
 * > footer > * {
-	background-color: #4d332 !important;
+	background-color: #4d3321 !important;
 	color: #white !important;
 }
 .statusbar_item {
