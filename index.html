@@ -187,8 +187,6 @@
       $('.new_game').click(function(e){
         e.preventDefault();
         newGame();
-        alert('New Game');
-        window.setTimeout("location.reload(true);",0);
       });
         
       $('.add').click(function(e){
@@ -199,13 +197,11 @@
       $('.fireEmp').click(function(e){
         e.preventDefault();
         fireEmp();
-        window.setTimeout("location.reload(true);",0);
       });
       
       $('.fireInv').click(function(e){
         e.preventDefault();
         fireInv();
-        window.setTimeout("location.reload(true);",0);
       });
       function getAllEmp(){
         return $.totalStorage.getAllEmp();
@@ -261,7 +257,7 @@
           }
           document.write("<div class='three columns'>");
           document.write("<a href='#employee_hire' data-router='section' id='emp"+x+"'>");
-          document.write("<img id='empPic"+x+"' onclick='changeEmpProfileInfo("+x+");'>");
+          document.write("<img scr='/CoffeeInc2/assets/empty.svg' id='empPic"+x+"' onclick='changeEmpProfileInfo("+x+");'>");
           document.write("</a>");
           document.write("</div>");
           if(x!=0 && x%3==0)
@@ -282,7 +278,7 @@
           }
           document.write("<div class='three columns'>");
           document.write("<a href='#investment' data-router='section' id='inv"+x+"'>");
-          document.write("<img id='invPic"+x+"' onclick='changeInvProfileInfo("+x+");'>");
+          document.write("<img scr='/CoffeeInc2/assets/empty.svg' id='invPic"+x+"' onclick='changeInvProfileInfo("+x+");'>");
           document.write("</a>");
           document.write("</div>");
           if(x!=0 && x%3==0)
