@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'coffeeicons';
+	src:url('fonts/coffeeicons.eot');
+	src:url('fonts/coffeeicons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/coffeeicons.svg#coffeeicons') format('svg'),
+		url('fonts/coffeeicons.woff') format('woff'),
+		url('fonts/coffeeicons.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'coffeeicons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-team:before, .icon-skill:before, .icon-settings:before, .icon-satisfaction:before, .icon-product:before, .icon-percent:before, .icon-money:before, .icon-left:before, .icon-investors:before, .icon-delete:before {
+	font-family: 'coffeeicons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-team:before {
+	content: "\74";
+}
+.icon-skill:before {
+	content: "\64";
+}
+.icon-settings:before {
+	content: "\73";
+}
+.icon-satisfaction:before {
+	content: "\68";
+}
+.icon-product:before {
+	content: "\70";
+}
+.icon-percent:before {
+	content: "\25";
+}
+.icon-money:before {
+	content: "\24";
+}
+.icon-left:before {
+	content: "\3c";
+}
+.icon-investors:before {
+	content: "\69";
+}
+.icon-delete:before {
+	content: "\78";
+}
