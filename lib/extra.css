@@ -1,8 +1,12 @@
+* {
+	-webkit-box-shadow: 0px 0px 0px 0px transparent !important;
+    -moz-box-shadow: 0px 0px 0px 0px transparent !important;
+    box-shadow: 0px 0px 0px 0px transparent !important;
+}
 .mainmenu-button {
 	width:80%;
 	margin: 0 auto;
 }
-
 #main > header {
 	background-color: #4d3321 !important;
 	color: #white !important;
@@ -124,9 +128,9 @@ label {
 	font-size:18px;
 	width: 40px;
     color: black !important;
-    -webkit-box-shadow: 0px 0px 0px 0px transparent;
-    -moz-box-shadow: 0px 0px 0px 0px transparent;
-    box-shadow: 0px 0px 0px 0px transparent;
+    -webkit-box-shadow: 0px 0px 0px 0px transparent !important;
+    -moz-box-shadow: 0px 0px 0px 0px transparent !important;
+    box-shadow: 0px 0px 0px 0px transparent !important;
 }	
 .statusbar_item:last-child > * {
 	width: 55px;	
@@ -242,3 +246,5 @@ header nav.box a {
 	padding-left: 10px;
 	padding-right: 10px;
 }
+
+

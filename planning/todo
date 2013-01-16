@@ -15,3 +15,4 @@
 * iconfont exportieren und einsetzen
 * investor interest streichen -> angebote direkt abhängig von product und talent
 * bug: bei 9 employees werden alle so klein wie das + symbol
+* bug: employee skillbar werte über 10 gehen über die maximale länge (evtl. 0..10 statt 0..100?)
