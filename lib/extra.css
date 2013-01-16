@@ -246,5 +246,13 @@ header nav.box a {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-
-
+/*
+footer nav.box a span {
+	font-size: 3em !important;
+	color: red !important;
+}
+header nav.box a .icon.team:before {
+	font-size: 3em !important;
+	color: red !important;
+}
+*/
