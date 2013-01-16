@@ -82,7 +82,7 @@
         if($.totalStorage.getItem("inv")){
           investorInformation=$.totalStorage.getItem("inv");
         }else{
-          investorInformation.push([0,0,0,0]);
+          investorInformation.push([0,0,0,0,0,0]);
           $.totalStorage("inv",investorInformation);
         }
         if(!$.totalStorage.getItem("stat_product"))
@@ -120,7 +120,8 @@
           var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
           var tmpSkill=$("#newEmpSkill1").val();
           var tmpSalary=$("#newEmpSalary1").val();
-          hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSalary);
+          investorDeny(1,tmpPicId,tmpName,tmpSkill,tmpSalary);//1 equals deny hire
+          //hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSalary);
         });
       $('.employee_hire_pic2').click(function(e){
         e.preventDefault();
@@ -128,7 +129,8 @@
         var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
         var tmpSkill=$("#newEmpSkill2").val();
         var tmpSalary=$("#newEmpSalary2").val();
-        hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSalary);
+        investorDeny(1,tmpPicId,tmpName,tmpSkill,tmpSalary);
+        //hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSalary);
       });
       $('.employee_hire_pic3').click(function(e){
         e.preventDefault();
@@ -136,7 +138,8 @@
         var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
         var tmpSkill=$("#newEmpSkill3").val();
         var tmpSalary=$("#newEmpSalary3").val();
-        hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSalary);
+        investorDeny(1,tmpPicId,tmpName,tmpSkill,tmpSalary);
+        //hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSalary);
       });
       $('.employee_hire_pic4').click(function(e){
         e.preventDefault();
@@ -144,7 +147,8 @@
         var tmpName=nameArray[Math.floor(Math.random()*nameArray.length)]+" "+surnameArray[Math.floor(Math.random()*surnameArray.length)];
         var tmpSkill=$("#newEmpSkill4").val();
         var tmpSalary=$("#newEmpSalary4").val();
-        hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSalary);
+        investorDeny(1,tmpPicId,tmpName,tmpSkill,tmpSalary);
+        //hireEmployee(tmpPicId,tmpName,tmpSkill,tmpSalary);
       });
       
       $('.investor_hire_pic1').click(function(e){
@@ -182,24 +186,8 @@
       
       $('.new_game').click(function(e){
         e.preventDefault();
-        employeeInformation=[];
-        employeeInformation.push([0,0,0,0,0,0,0]);
-        $.totalStorage("emp", employeeInformation);
-        investorInformation=[];
-        investorInformation.push([0,0,0,0]);
-        $.totalStorage("inv", investorInformation);
-        $.totalStorage.setItem("stat_product", 0);
-        $.totalStorage.setItem("stat_talent", 0);
-        $.totalStorage.setItem("stat_sat", 0);
-        $.totalStorage.setItem("stat_invint", 0);
-        $.totalStorage.setItem("stat_old_budget", 0);
-        $.totalStorage.setItem("avSalary",0);
-        $.totalStorage.setItem("stat_budget", 10000);
-        $.totalStorage.setItem("stat_equity",100);
-        $.totalStorage.setItem("counter",0);
+        newGame();
         alert('New Game');
-        //paintEmpField();
-        //updateHeader();
         window.setTimeout("location.reload(true);",0);
       });
         
@@ -210,35 +198,14 @@
         
       $('.fireEmp').click(function(e){
         e.preventDefault();
-        $.totalStorage.setItem("avSalary",$.totalStorage.getItem("avSalary")-parseInt(employeeInformation[currentEmpPosition][6]));
-        employeeInformation.splice(currentEmpPosition,1);
-        var talent=0;
-        var satisfaction=0;
-        for(i = 0; i < employeeInformation.length; i++){
-          talent=parseInt(talent)+parseInt(employeeInformation[i][2]);
-          satisfaction=parseInt(satisfaction)+parseInt(employeeInformation[i][4]);
-        }
-        $.totalStorage.setItem("stat_sat",Math.round(satisfaction/employeeInformation.length));//satisfactionscore
-        $.totalStorage.setItem("stat_talent",Math.round(talent/employeeInformation.length));//talentscore
-        $.totalStorage.setItem("stat_product",Math.round((2*(talent/3)+parseInt(satisfaction/3))));//randomly influenced productscore
-        $.totalStorage.setItem("emp", employeeInformation);
-        employeeInformation=$.totalStorage.getItem("emp");
-        alert('Employee got fired! new value for key emp: '+employeeInformation+";");
+        fireEmp();
         window.setTimeout("location.reload(true);",0);
-        paintEmpField();
       });
       
       $('.fireInv').click(function(e){
         e.preventDefault();
-        alert("-"+investorInformation[currentInvPosition][3]+"$ Investment Offer");
-        $.totalStorage.setItem("stat_equity", $.totalStorage.getItem("stat_equity")+parseInt(investorInformation[currentInvPosition][2]));
-        $.totalStorage.setItem("stat_budget",$.totalStorage.getItem("stat_budget")-parseInt(investorInformation[currentInvPosition][3]));
-        investorInformation.splice(currentInvPosition,1);
-        $.totalStorage.setItem("inv", investorInformation);
-        investorInformation=$.totalStorage.getItem("inv");
-        alert('Investor got fired! new value for key inv '+investorInformation+";");
+        fireInv();
         window.setTimeout("location.reload(true);",0);
-        paintEmpField();
       });
       function getAllEmp(){
         return $.totalStorage.getAllEmp();
