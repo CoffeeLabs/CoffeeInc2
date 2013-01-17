@@ -88,9 +88,6 @@
         <div data-icon="percent" class="statusbar_item">
           <input type="text" readonly value="0" id="stat_equity" class="stat_item_inp">
         </div>
-        <div data-icon="user" class="statusbar_item">
-          <input type="text" readonly value="0" id="tmpcounts" class="stat_item_inp">
-        </div>
         <div data-icon="dollar" class="statusbar_item">
           <input type="text" readonly value="0" id="stat_budget" class="stat_item_inp">
         </div>
@@ -105,7 +102,7 @@
             document.write("<div class='three rows'>");
           }
           document.write("<div class='three columns'>");
-          document.write("<a href='#' data-router='section' id='emp"+x+"'>");
+          document.write("<a data-router='section' id='emp"+x+"'>");
           document.write("<img scr='/CoffeeInc2/assets/empty.svg' id='empPic"+x+"' onclick='changeEmpProfileInfo("+x+");'>");
           document.write("</a>");
           document.write("</div>");
@@ -126,7 +123,7 @@
             document.write("<div class='three rows'>");
           }
           document.write("<div class='three columns'>");
-          document.write("<a href='#' data-router='section' id='inv"+x+"'>");
+          document.write("<a data-router='section' id='inv"+x+"'>");
           document.write("<img scr='/CoffeeInc2/assets/empty.svg' id='invPic"+x+"' onclick='changeInvProfileInfo("+x+");'>");
           document.write("</a>");
           document.write("</div>");
