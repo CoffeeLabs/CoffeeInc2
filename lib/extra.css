@@ -114,7 +114,7 @@ label {
 	border: none !important;
     background-color:transparent !important;
     font-weight: bold;
-	font-size:13px;
+	font-size: 1.1em;
 	width: 22px;
     color: black !important;
     -webkit-box-shadow: 0px 0px 0px 0px transparent;
@@ -125,13 +125,13 @@ label {
 	background-color: transparent !important;
 	border: none !important;
 	font-weight: bold;
-	font-size:18px;
+	font-size: 1.1em;
 	width: 40px;
     color: black !important;
     -webkit-box-shadow: 0px 0px 0px 0px transparent !important;
     -moz-box-shadow: 0px 0px 0px 0px transparent !important;
     box-shadow: 0px 0px 0px 0px transparent !important;
-}	
+}
 .statusbar_item:last-child > * {
 	width: 55px;	
 }
