@@ -252,12 +252,13 @@ header nav.box a {
 	line-height: 2.5em;
 	color: black;
 }
-header statusbar_item [data-icon]::before {
+header .statusbar_item [data-icon]::before {
 	font-size: 1.4em !important;
 	line-height: 2.6em;
 	padding-right: 4px;
 	padding-bottom: 3px !important;
-	color: white !important;
+	color: red !important;
+	background-color: blue;
 }
 header [data-icon]::before {
 	color: white !important;
@@ -284,4 +285,8 @@ header #empProfileName {
 }
 body {
 	max-width: 600px !important;
+}
+header nav.box.right a {
+	font-size: 4em;
+	line-height: 3.6em;
 }
