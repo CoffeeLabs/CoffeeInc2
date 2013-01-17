@@ -272,6 +272,16 @@ header {
 	border-bottom: 2px solid black;
 	color: white !important;
 }
+header #empProfileName {
+	background-color: #4d3321 !important;
+	border: none;
+	text-align: center !important;
+	float:center;
+	width: 50%;
+	font-size: 1em;
+	font-weight: bold;
+	color: white;
+}
 /*
 footer nav.box a span {
 	font-size: 3em !important;
