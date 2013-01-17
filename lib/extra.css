@@ -265,6 +265,7 @@ header [data-icon]::before {
 footer [data-icon]::before {
 	line-height: 1.65em !important;
 	font-size: 1.8em !important;
+	
 	padding-left: 1em;
 	color: white !important;
 }

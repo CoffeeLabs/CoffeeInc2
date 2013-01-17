@@ -5,7 +5,8 @@
 * investoren lehnen entscheidungen ab (random abhängig von der secret variable, vorerst nur für hire/fire)
 * iconfont exportieren und einsetzen
 * bug: employee skillbar werte über 10 gehen über die maximale länge (evtl. 0..10 statt 0..100?)
-* bug: leere investor felder funktionieren wie + buttons
 * css in hire feldern bei employees und investors (schrift+icons)
 * investor hire back icon
 * tippfehler in win message
+* investor profile $ zeichen bei investment
+* investor offers steigen zu schnell
