@@ -246,6 +246,20 @@ header nav.box a {
 	padding-left: 10px;
 	padding-right: 10px;
 }
+[data-icon]::before {
+	font-size: 1.4em !important;
+	line-height: 2.5em;
+	color: white;
+}
+header [data-icon]::before {
+	font-size: 1.4em !important;
+	line-height: 2.6em;
+	padding-right: 4px;
+}
+ 
+footer [data-icon]::before {
+	line-height: 2em !important;
+}
 /*
 footer nav.box a span {
 	font-size: 3em !important;
