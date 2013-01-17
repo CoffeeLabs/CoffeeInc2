@@ -250,22 +250,27 @@ header nav.box a {
 [data-icon]::before {
 	font-size: 1.4em !important;
 	line-height: 2.5em;
-	color: white;
+	color: black;
 }
 header statusbar_item [data-icon]::before {
 	font-size: 1.4em !important;
 	line-height: 2.6em;
 	padding-right: 4px;
 	padding-bottom: 3px !important;
+	color: white !important;
 }
-
+header [data-icon]::before {
+	color: white !important;
+}
 footer [data-icon]::before {
 	line-height: 1.65em !important;
 	font-size: 1.8em !important;
 	padding-left: 1em;
+	color: white !important;
 }
 header {
 	border-bottom: 2px solid black;
+	color: white !important;
 }
 /*
 footer nav.box a span {
