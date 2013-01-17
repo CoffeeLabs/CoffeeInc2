@@ -1,18 +1,11 @@
-* /10 bei product score
-* notification bei sieg und loose
 * investor profil
-* investor fire zinsen
-* namen in employee/investor profile (mit input?)
 * pausen für employees (alle random*10s stoppt die animation und das basis frame wird gezeigt)
-* algorithmus für equity
 * algorithmus für investor offer
-* limits für product, talent, salary
 * limit für min salary bei ca 1500
-* kein investor darf mehr equity als der spieler haben
-* bei 3 zyklen mit budget <=0 spiel game over
 * investoren lehnen entscheidungen ab (random abhängig von der secret variable, vorerst nur für hire/fire)
-* css für hire und profile topbar
 * iconfont exportieren und einsetzen
-* investor interest streichen -> angebote direkt abhängig von product und talent
-* bug: bei 9 employees werden alle so klein wie das + symbol
 * bug: employee skillbar werte über 10 gehen über die maximale länge (evtl. 0..10 statt 0..100?)
+* bug: leere investor felder funktionieren wie + buttons
+* css in hire feldern bei employees und investors (schrift+icons)
+* investor hire back icon
+* tippfehler in win message
