@@ -1,12 +1,6 @@
-* investor profil
-* pausen für employees (alle random*10s stoppt die animation und das basis frame wird gezeigt)
-* algorithmus für investor offer
+* algorithmus für investor offer (funktioniert nicht richtig)
 * limit für min salary bei ca 1500
 * investoren lehnen entscheidungen ab (random abhängig von der secret variable, vorerst nur für hire/fire)
-* iconfont exportieren und einsetzen
-* bug: employee skillbar werte über 10 gehen über die maximale länge (evtl. 0..10 statt 0..100?)
-* css in hire feldern bei employees und investors (schrift+icons)
-* investor hire back icon
-* tippfehler in win message
 * investor profile $ zeichen bei investment
 * investor offers steigen zu schnell
+* fire button text ist zu klein

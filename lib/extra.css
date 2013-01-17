@@ -265,7 +265,6 @@ header [data-icon]::before {
 footer [data-icon]::before {
 	line-height: 1.65em !important;
 	font-size: 1.8em !important;
-	
 	padding-left: 1em;
 	color: white !important;
 }
@@ -283,13 +282,6 @@ header #empProfileName {
 	font-weight: bold;
 	color: white;
 }
-/*
-footer nav.box a span {
-	font-size: 3em !important;
-	color: red !important;
+body {
+	max-width: 600px !important;
 }
-header nav.box a .icon.team:before {
-	font-size: 3em !important;
-	color: red !important;
-}
-*/
