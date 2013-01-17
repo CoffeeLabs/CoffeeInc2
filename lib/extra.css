@@ -237,28 +237,35 @@ section > footer > nav a {
 }
 header nav.box a {
 /*	background-color: #7a5a44 !important;*/
-	line-height: 32px;
+	line-height: 1em;
 	height: 32px;
-	margin: 4px;
+	margin: 3px 4px 4px 4px;
 	font-size: 0.7em !important;
 	border-radius: 10px;
 	border: 2px solid black;
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-bottom: 3px !important;
 }
 [data-icon]::before {
 	font-size: 1.4em !important;
 	line-height: 2.5em;
 	color: white;
 }
-header [data-icon]::before {
+header statusbar_item [data-icon]::before {
 	font-size: 1.4em !important;
 	line-height: 2.6em;
 	padding-right: 4px;
+	padding-bottom: 3px !important;
 }
- 
+
 footer [data-icon]::before {
-	line-height: 2em !important;
+	line-height: 1.65em !important;
+	font-size: 1.8em !important;
+	padding-left: 1em;
+}
+header {
+	border-bottom: 2px solid black;
 }
 /*
 footer nav.box a span {
