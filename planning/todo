@@ -1,16 +1,13 @@
-* algorithmus für investor offer (funktioniert nicht richtig)
+* algorithmus für investor offer (funktioniert nicht richtig, investor offers steigen zu schnell)
 * limit für min salary bei ca 1500
-* investor profile $ zeichen bei investment
-* investor offers steigen zu schnell
-* fire button text ist zu klein
+* Spiel generell schwieriger machen (kleinere Investments, schnellere Zyklen)
 * employee + investor namen zentrieren
 * zu lange namen eliminieren
-* hire funktioniert nicht immer (ca jedes 2. mal failt)
 * input felder für namen können angeklickt und verändert werden
 * skill von employees steigt nicht
 * investor überschreib bug bei employees (nachdem der erste investor hinzugefügt wurde, erscheinen neue employees über den alten, gleich wie vorher bei investoren)
-* investoren lehnen entscheidungen ab loop wird nicht ausgeführt???
 * investor profil namen css
-* investor profil lädt manchmal keine inhalte (name, bild, scores)
+* investor profil lädt manchmal keine inhalte (name, bild (will inv_0.svg laden???), scores)
 * nachdem ein hire abgelehnt wurde, müssen neue employees im hire view generiert werden, damit man nicht, wenn ein hire abgelehnt wurde, denselben employee nochmal einstellen kann
-* animations pausen sehen wie lag aus (evtl. eliminieren?)
+* animations pausen sehen wie lag aus (evtl. eliminieren oder das basis frame bei pausen verwenden?)
+* about dialog erscheint bei neu laden der seite
