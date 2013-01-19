@@ -106,6 +106,14 @@ label {
 	font-size: 15px;
 	font-weight: 300;
 }
+#investment .hireinfo > * {
+	font-weight: bold;
+	margin-right: 10px;
+	font-size: 15px;
+	font-weight: 300;
+	color: blue !important;
+	line-height: 0px !important;
+}
 .add_button {
 	width: 60% !important;
 	margin: 30px auto auto 36% !important;
