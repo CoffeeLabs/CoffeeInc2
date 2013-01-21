@@ -1,18 +1,35 @@
 Coffee Inc.
 ==========
 
-Coffee Inc. is a simple, hacky game built as a university project by students of the Free University of Bolzano.
-The assignment was to build a game that teaches the basics of the startup world, in a fun way.
+Coffee Inc. is a simple, hacky game built as a university project by students of the Free University of Bolzano for Pekka Abrahamsson's course "Introduction to Management Engineering" in 2012/2013.
+The assignment was to build a game that teaches the basics of startup culture, in a fun way.
 
 Our game is basically a mobile website (based on the Lungo.js framework) with some custom Javascript.
 
 ## How the game works
-You are a startup founder with an awesome idea and want to start your own business
+You are a startup founder with an awesome idea and want to start your own business. Your goal is to develop a quality product that will allow you to build a solid business.
+However, since you don't have enough money, you will need investors to help fund the development. However, investors can be a problem, because they want equity of your company and sometimes force you to make certain decisions.
+
+You win the game when your product quality reaches a score of 100 and you lose if you go bankrupt.
 
 ### UI elements
+#### Navigation
+Left to right:
+1. Employee View
+2. Investor View
+3. Menu
+
 #### Statusbar
 Left to right: 
-Product Score (Game Progress)
+1. Product Score (Game Progress)
+2. Employee Satisfied (How satisfied your employees are with their working conditions)
+3. How many percent of the company you still own ()
+4. Budget (How much money you have right now)
+
+## Hire Employees
+Icons below employee pictures (Left to right):
+1. Skill
+2. Minimum Salary (the employee will be unh appy if you pay hitm less than this)
 
 ## Why the game is cool
 * It uses some fancy new web technologies like localstorage
@@ -24,10 +41,9 @@ Product Score (Game Progress)
 ## Issues 
 * Bugs
 * Lots of ugly hacks
-* Doesn't work in most browsers
+* Doesn't work in many browsers
 
 ## Browser Support
-
 The game works best in:
 * Chromium 24 on GNU/Linux
 
@@ -50,7 +66,9 @@ The game doesn't work in:
 If you test in devices/browsers not listed here, please report if it works/what issues you had.
 
 ## How to run the game
+Try the game here: ![http://5.175.154.87/CoffeeInc2/](http://5.175.154.87/CoffeeInc2/)
 
+If you want to run it yourself, these are the steps neccessary:
 1. Install a local webserver
 2. Git clone (or download) this repository into your localhost folder
 3. Open localhost/c3 in your browser (or even better, open yourpcslocalip/c3 on your mobile device)

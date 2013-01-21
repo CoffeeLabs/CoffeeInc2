@@ -335,6 +335,7 @@ header nav.box.right a {
 }
 label {
 	color: black !important;
+	
 }
 label#invProfileEquity, label#invProfileOffer {
 	margin-top: 30px !important;
@@ -344,4 +345,16 @@ div.statusbar_item:first-child {
 }
 div.statusbar_item > *:first-child {
 	margin-right: 3px !important;
+}
+div.hireinfo > * > *.first-child {
+	margin-right: 3px !important;
+	color: red;
+}
+input#newEmpSkill.1stat_item_inp, input#newEmpSkill2.stat_item_inp, input#newEmpSkill3.stat_item_inp, input#newEmpSkill4.stat_item_inp {
+	margin-left: 6px;
+	font-size: 15px !important;
+}
+input#newEmpSalary1.stat_item_inp_sal, input#newEmpSalary2.stat_item_inp_sal, input#newEmpSalary.stat_item_inp_sal, input#newEmpSalary4.stat_item_inp_sal {
+	margin-left: 1px;
+	font-size: 15px !important;
 }
