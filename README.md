@@ -28,13 +28,13 @@ Left to right:
 3. How many percent of the company you still own
 4. Budget (How much money you have right now)
 
-## Hire Employees
+### Hire Employees
 Icons below employee pictures (Left to right):
 
 1. Skill
 2. Minimum Salary (the employee will be unh appy if you pay hitm less than this)
 
-## Get Investors
+### Get Investors
 Icons below investor pictures (Left to right):
 
 1. Equity
