@@ -1,7 +1,7 @@
 Coffee Inc.
 ==========
 
-CoffeeInc is a simple, hacky game built as a university project by students of the Free University of Bolzano.
+Coffee Inc. is a simple, hacky game built as a university project by students of the Free University of Bolzano.
 The assignment was to build a game that teaches the basics of the startup world, in a fun way.
 
 Our game is basically a mobile website (based on the Lungo.js framework) with some custom Javascript.
