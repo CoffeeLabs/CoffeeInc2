@@ -6,12 +6,48 @@ The assignment was to build a game that teaches the basics of the startup world,
 
 Our game is basically a mobile website (based on the Lungo.js framework) with some custom Javascript.
 
+## How the game works
+You are a startup founder with an awesome idea and want to start your own business. Your goal is to develop a quality product that will allow you to build a solid business.
+However, since you don't have enough money, you will need investors to help fund the development. However, investors can be a problem, because they want equity of your company and sometimes force you to make certain decisions.
+
+You win the game when your product quality reaches a score of 100 and you lose if you go bankrupt.
+
+## UI elements
+### Navigation
+Left to right:
+
+1. Employee View
+2. Investor View
+3. Menu
+
+### Statusbar
+Left to right: 
+
+1. Product Score (Game Progress)
+2. Employee Satisfied (How satisfied your employees are with their working conditions)
+3. How many percent of the company you still own
+4. Budget (How much money you have right now)
+
+### Hire Employees
+Icons below employee pictures (Left to right):
+
+1. Skill
+2. Minimum Salary (the employee will be unh appy if you pay hitm less than this)
+
+### Get Investors
+Icons below investor pictures (Left to right):
+
+1. Equity
+2. Investment
+
+
 ## Why the game is cool
 * It uses some fancy new web technologies like localstorage
 * All assets are 100% vector (SVG images)
 * Even animations are vector (SVGs are swapped out with JS)
 * Responsive layout
 * We use a custom icon font for the monochrome icons in the UI
+* Dubstep in the presentation video (http://www.youtube.com/watch?v=0cTe5GC3yVY)
  
 ## Issues 
 * Bugs
@@ -38,7 +74,15 @@ The game doesn't work in:
 * Epiphany 3.6 on GNU/Linux
 * Android 2 stock browser
 
+
 ##How to run the game
+
+If you test in devices/browsers not listed here, please report if it works/what issues you had.
+
+## How to run the game
+You can try the game here: http://5.175.154.87/CoffeeInc2
+
+If you want to run it yourself, these are the steps neccessary:
 
 1. Install a local webserver
 2. Git clone (or download) this repository into your localhost folder
