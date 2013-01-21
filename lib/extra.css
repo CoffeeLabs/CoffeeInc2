@@ -1,29 +1,63 @@
+@font-face {
+    font-family: 'ComfortaaThin';
+    src: url('Comfortaa_Thin-webfont.eot');
+    src: url('Comfortaa_Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Comfortaa_Thin-webfont.woff') format('woff'),
+         url('Comfortaa_Thin-webfont.ttf') format('truetype'),
+         url('Comfortaa_Thin-webfont.svg#ComfortaaThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ComfortaaRegular';
+    src: url('Comfortaa_Regular-webfont.eot');
+    src: url('Comfortaa_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Comfortaa_Regular-webfont.woff') format('woff'),
+         url('Comfortaa_Regular-webfont.ttf') format('truetype'),
+         url('Comfortaa_Regular-webfont.svg#ComfortaaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ComfortaaBold';
+    src: url('Comfortaa_Bold-webfont.eot');
+    src: url('Comfortaa_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Comfortaa_Bold-webfont.woff') format('woff'),
+         url('Comfortaa_Bold-webfont.ttf') format('truetype'),
+         url('Comfortaa_Bold-webfont.svg#ComfortaaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 * {
 	-webkit-box-shadow: 0px 0px 0px 0px transparent !important;
     -moz-box-shadow: 0px 0px 0px 0px transparent !important;
     box-shadow: 0px 0px 0px 0px transparent !important;
+    
+    font-family: ComfortaaBold !important;
 }
 .mainmenu-button {
 	width:80%;
 	margin: 0 auto;
 }
 #main > header {
-	background-color: #4d3321 !important;
+	background-color: #464853 !important;
 	color: #white !important;
 /*	border-bottom: 4px solid #666;*/
 }
 #employee_profile > header {
-	background-color: #4d3321 !important;	
+	background-color: #464853 !important;	
 	color: #white !important;
 }
 * > header {
-	background-color: #4d3321 !important;
+	background-color: #464853 !important;
 }
 * > header * {
 	color: #white !important;
 }
 * > footer > * {
-	background-color: #4d3321 !important;
+	background-color: #464853 !important;
 	color: #white !important;
 }
 .statusbar_item {
@@ -150,7 +184,7 @@ label {
 	border: 2px solid #666;
 }
 button {
-	background-color: #4d3321;
+	background-color: #464853;
 	border: 2px solid black;
 	border-radius: 10px;	
 	font-weight: bold;
@@ -176,7 +210,7 @@ button {
     height: 30px;
 }
 .brownbg {
-	background-color: #4d3321 !important;
+	background-color: #464853 !important;
 	border: none !important;
 	/*border: 2px solid black !important;
 	*/
@@ -203,7 +237,7 @@ nav.groupbar > a, footer nav > a {
 section > footer > nav a.current  {
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
-	background-color: #7a5a44 !important;	
+	background-color: #616574 !important;	
 	border-right: 2px solid black !important;
 	border-left: 2px solid black !important;
 }
@@ -217,7 +251,7 @@ section > footer > nav a {
 	border-radius: 10px !important;
 }
 .progress .bar .value {
-	background-color: #7a5a44 !important;
+	background-color: #616574 !important;
 	border: 2px solid black !important;
 	border-radius: 10px !important;
 	margin-top: -2px;
@@ -244,7 +278,7 @@ section > footer > nav a {
   line-height: 50px !important;
 }
 header nav.box a {
-/*	background-color: #7a5a44 !important;*/
+/*	background-color: #616574 !important;*/
 	line-height: 1em;
 	height: 32px;
 	margin: 3px 4px 4px 4px;
@@ -281,8 +315,8 @@ header {
 	border-bottom: 2px solid black;
 	color: white !important;
 }
-header #empProfileName {
-	background-color: #4d3321 !important;
+header #empProfileName, header #invProfileName {
+	background-color: #464853 !important;
 	border: none;
 	text-align: center !important;
 	float:center;
