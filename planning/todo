@@ -1,3 +1,4 @@
 * limit für min salary bei ca 1500
 * investor überschreib bug bei employees (nachdem der erste investor hinzugefügt wurde, erscheinen neue employees über den alten, gleich wie vorher bei investoren)
 * investor profil lädt manchmal keine inhalte (name, bild (will inv_0.svg laden???), scores)
+* media queries für profil titel zentrieren
