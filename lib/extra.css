@@ -35,7 +35,7 @@
     -moz-box-shadow: 0px 0px 0px 0px transparent !important;
     box-shadow: 0px 0px 0px 0px transparent !important;
     
-    font-family: ComfortaaBold !important;
+    font-family: ComfortaaRegular !important;
 }
 .mainmenu-button {
 	width:80%;
@@ -260,11 +260,11 @@ section > footer > nav a {
 #salaryDec {
   float: left;
   border-radius: 10px;
-  background-color: red;
+  background-color: #b32222;
 }
 #salaryInc {
     float: right;
-    background-color: green;
+    background-color: #63b520;
 }
 .salaryButton{
   width: 47% !important;
@@ -332,4 +332,3 @@ header nav.box.right a {
 	font-size: 4em;
 	line-height: 3.6em;
 }
-
