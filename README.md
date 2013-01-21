@@ -25,7 +25,7 @@ Left to right:
 
 1. Product Score (Game Progress)
 2. Employee Satisfied (How satisfied your employees are with their working conditions)
-3. How many percent of the company you still own ()
+3. How many percent of the company you still own
 4. Budget (How much money you have right now)
 
 ## Hire Employees
