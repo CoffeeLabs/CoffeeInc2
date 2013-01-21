@@ -6,10 +6,19 @@ The assignment was to build a game that teaches the basics of the startup world,
 
 Our game is basically a mobile website (based on the Lungo.js framework) with some custom Javascript.
 
+## How the game works
+You are a startup founder with an awesome idea and want to start your own business
+
+### UI elements
+#### Statusbar
+Left to right: 
+Product Score (Game Progress)
+
 ## Why the game is cool
 * It uses some fancy new web technologies like localstorage
 * All assets are 100% vector (SVG images)
 * Even animations are vector (SVGs are swapped out with JS)
+* Responsive Layout
 * We use a custom icon font for the monochrome icons in the UI
  
 ## Issues 
@@ -18,6 +27,7 @@ Our game is basically a mobile website (based on the Lungo.js framework) with so
 * Doesn't work in most browsers
 
 ## Browser Support
+
 The game works best in:
 * Chromium 24 on GNU/Linux
 
@@ -37,7 +47,9 @@ The game doesn't work in:
 * Epiphany 3.6 on GNU/Linux
 * Android 2 stock browser
 
-##How to run the game
+If you test in devices/browsers not listed here, please report if it works/what issues you had.
+
+## How to run the game
 
 1. Install a local webserver
 2. Git clone (or download) this repository into your localhost folder
