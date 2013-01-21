@@ -15,12 +15,14 @@ You win the game when your product quality reaches a score of 100 and you lose i
 ## UI elements
 ### Navigation
 Left to right:
+
 1. Employee View
 2. Investor View
 3. Menu
 
 ### Statusbar
 Left to right: 
+
 1. Product Score (Game Progress)
 2. Employee Satisfied (How satisfied your employees are with their working conditions)
 3. How many percent of the company you still own ()
@@ -28,11 +30,13 @@ Left to right:
 
 ## Hire Employees
 Icons below employee pictures (Left to right):
+
 1. Skill
 2. Minimum Salary (the employee will be unh appy if you pay hitm less than this)
 
 ## Get Investors
 Icons below investor pictures (Left to right):
+
 1. Equity
 2. Investment
 
