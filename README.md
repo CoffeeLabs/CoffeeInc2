@@ -12,14 +12,14 @@ However, since you don't have enough money, you will need investors to help fund
 
 You win the game when your product quality reaches a score of 100 and you lose if you go bankrupt.
 
-### UI elements
-#### Navigation
+## UI elements
+### Navigation
 Left to right:
 1. Employee View
 2. Investor View
 3. Menu
 
-#### Statusbar
+### Statusbar
 Left to right: 
 1. Product Score (Game Progress)
 2. Employee Satisfied (How satisfied your employees are with their working conditions)
@@ -31,13 +31,19 @@ Icons below employee pictures (Left to right):
 1. Skill
 2. Minimum Salary (the employee will be unh appy if you pay hitm less than this)
 
+## Get Investors
+Icons below investor pictures (Left to right):
+1. Equity
+2. Investment
+
+
 ## Why the game is cool
 * It uses some fancy new web technologies like localstorage
 * All assets are 100% vector (SVG images)
 * Even animations are vector (SVGs are swapped out with JS)
 * Responsive Layout
 * We use a custom icon font for the monochrome icons in the UI
-* Dubstep in the presentation video ![]()
+* Dubstep in the presentation video (http://www.youtube.com/watch?v=0cTe5GC3yVY)
  
 ## Issues 
 * Bugs
