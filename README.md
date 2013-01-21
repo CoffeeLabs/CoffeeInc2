@@ -37,6 +37,7 @@ Icons below employee pictures (Left to right):
 * Even animations are vector (SVGs are swapped out with JS)
 * Responsive Layout
 * We use a custom icon font for the monochrome icons in the UI
+* Dubstep in the presentation video ![]()
  
 ## Issues 
 * Bugs
@@ -66,9 +67,10 @@ The game doesn't work in:
 If you test in devices/browsers not listed here, please report if it works/what issues you had.
 
 ## How to run the game
-Try the game here: ![http://5.175.154.87/CoffeeInc2/](http://5.175.154.87/CoffeeInc2/)
+You can try the game here: http://5.175.154.87/CoffeeInc2
 
 If you want to run it yourself, these are the steps neccessary:
+
 1. Install a local webserver
 2. Git clone (or download) this repository into your localhost folder
 3. Open localhost/c3 in your browser (or even better, open yourpcslocalip/c3 on your mobile device)
