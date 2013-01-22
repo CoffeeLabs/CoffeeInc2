@@ -359,7 +359,7 @@ input#newEmpSalary1.stat_item_inp_sal, input#newEmpSalary2.stat_item_inp_sal, in
 	font-size: 15px !important;
 }
 
-
+/*
 @media only screen and (max-width:790px) {
 	header #empProfileName, header #invProfileName {
 	margin-left: 18% !important;
@@ -400,3 +400,4 @@ input#newEmpSalary1.stat_item_inp_sal, input#newEmpSalary2.stat_item_inp_sal, in
 	header #empProfileName, header #invProfileName {
 	margin-left: 6% !important;
 }
+*/
