@@ -324,7 +324,7 @@ header #empProfileName, header #invProfileName {
 	font-size: 1em;
 	font-weight: bold;
 	color: white;
-	margin-left: 20%;
+	margin-left: 6%;
 }
 body {
 	max-width: 600px !important;
@@ -362,41 +362,41 @@ input#newEmpSalary1.stat_item_inp_sal, input#newEmpSalary2.stat_item_inp_sal, in
 
 @media only screen and (max-width:790px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 18%;
+	margin-left: 18% !important;
 }
 @media only screen and (max-width:730px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 17%;
+	margin-left: 17% !important;
 }
 @media only screen and (max-width:690px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 16%;
+	margin-left: 16% !important;
 }
 @media only screen and (max-width:640px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 15%;
+	margin-left: 15% !important;
 }
 @media only screen and (max-width:590px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 14%;
+	margin-left: 14% !important;
 }
 @media only screen and (max-width:540px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 13%;
+	margin-left: 13% !important;
 }
 @media only screen and (max-width:510px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 11%;
+	margin-left: 11% !important;
 }
 @media only screen and (max-width:470px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 10%;
+	margin-left: 10% !important;
 }
 @media only screen and (max-width:420px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 8%;
+	margin-left: 8% !important;
 }
 @media only screen and (max-width:370px) {
 	header #empProfileName, header #invProfileName {
-	margin-left: 6%;
+	margin-left: 6% !important;
 }
