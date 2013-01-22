@@ -117,16 +117,16 @@
       <!--------------- Grid of Investors --------------->
       <article id="investors" class="employee_grid">
         <script type="text/javascript">
-        for(var x=0;x<9;x++){
-          if(x%3==0 || x==0){
+        for(var y=0;y<9;y++){
+          if(y%3==0 || y==0){
             document.write("<div class='three rows'>");
           }
           document.write("<div class='three columns'>");
-          document.write("<a data-router='section' id='inv"+x+"'>");
-          document.write("<img scr='/CoffeeInc2/assets/empty.svg' id='invPic"+x+"' onclick='changeInvProfileInfo("+x+");'>");
+          document.write("<a data-router='section' id='inv"+y+"'>");
+          document.write("<img scr='/CoffeeInc2/assets/empty.svg' id='invPic"+y+"' onclick='changeInvProfileInfo("+y+");'>");
           document.write("</a>");
           document.write("</div>");
-          if(x!=0 && x%3==0)
+          if(y!=0 && y%3==0)
             document.write("</div>");
         }
         </script>
