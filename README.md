@@ -1,6 +1,8 @@
 Coffee Inc.
 ==========
 
+![http://i.imgur.com/YXte8Ae.png](Download)
+
 Coffee Inc. is a simple, hacky game built as a university project by students of the Free University of Bolzano.
 The assignment was to build a game that teaches the basics of the startup world, in a fun way.
 
