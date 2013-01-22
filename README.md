@@ -59,6 +59,7 @@ Icons below investor pictures (Left to right):
 ## Browser Support
 The game works best in:
 * Chromium 24 on GNU/Linux
+* Chrome 23 on iOS
 
 The game kinda works in:
 * Firefox 18 on GNU/Linux (Lungo.js related styling problems)
@@ -69,6 +70,7 @@ The game kinda works in:
 * Chrome for Android (some weird SVG rendering bugs)
 * Android 4.1 stock browser (some weird SVG rendering bugs)
 * Safari on OSX 10.8 (some weird SVG rendering bugs)
+* Safari Mobile on iOS5 (extreme lag and rendering problems)
 
 The game doesn't work in:
 * Internet Explorer (Windows 7 and Windows Phone 7)
